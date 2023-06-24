@@ -48,6 +48,7 @@ html,
 body {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  cursor: none;
 }
 body {
   margin: 0;
@@ -62,4 +63,27 @@ body {
     font-size: 16px;
     line-height: normal;
   }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.custom-cursor.pulsing {
+  animation: pulse 1s infinite;
+}
+
+a {
+  cursor: none;
 }

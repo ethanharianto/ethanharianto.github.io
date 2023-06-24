@@ -9,6 +9,9 @@
   font-family: "Google Sans Regular";
   text-align: center;
 }
+* {
+  cursor: none;
+}
 
 .skills-text {
   font-size: 20px;

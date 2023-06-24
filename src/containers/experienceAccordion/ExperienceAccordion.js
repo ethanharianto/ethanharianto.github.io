@@ -33,13 +33,19 @@ class ExperienceAccordion extends Component {
                   Content: {
                     style: () => ({
                       backgroundColor: `${theme.body}`,
+                      color: `${theme.text}`,
                     }),
                   },
                 }}
               >
-{section["experiences"].map((experience,index) => {
+                {section["experiences"].map((experience, index) => {
                   return (
-                    <ExperienceCard index={index} totalCards={section["experiences"].length} experience={experience} theme={theme} />
+                    <ExperienceCard
+                      index={index}
+                      totalCards={section["experiences"].length}
+                      experience={experience}
+                      theme={theme}
+                    />
                   );
                 })}
               </Panel>

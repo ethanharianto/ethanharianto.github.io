@@ -44,6 +44,10 @@
 }
 
 .contact-heading-text-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -65,13 +69,18 @@
   height: auto;
 }
 
+.spotify-container {
+  width: 50%;
+  margin-top: 10%; /* Center the container horizontally */
+}
+
 .contact-heading-text {
   font-size: 56px;
   font-weight: 400;
   font-family: "Google Sans Medium";
   line-height: 1.1;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .blog-heading-text {

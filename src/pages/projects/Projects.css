@@ -3,6 +3,35 @@
   text-align: center;
 }
 
+.player-container {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 3%;
+  position: relative;
+}
+
+.image-container {
+  display: flex;
+  position: relative;
+  justify-content: center; /* Center the images horizontally */
+  align-items: center; /* Center the images vertically */
+  flex-wrap: wrap; /* Allow images to wrap to the next line */
+  gap: 5%; /* Add some gap between the images */
+  margin: 0 auto; /* Center the container itself */
+  margin-top: 3%;
+}
+
+.image-container img {
+  max-width: 42.5%;
+  border: 5px solid #672bff;
+}
+
+.player {
+  border: 5px solid #672bff;
+}
+
 .basic-projects {
   margin-left: 5%;
   margin-right: 5%;

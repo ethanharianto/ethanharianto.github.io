@@ -6,6 +6,8 @@ import PublicationCard from "../../components/publicationsCard/PublicationCard";
 import Button from "../../components/button/Button";
 import TopButton from "../../components/topButton/TopButton";
 import { Fade } from "react-reveal";
+import micah from "../../assests/images/micah.png";
+import swift from "../../assests/images/swift.png";
 import {
   greeting,
   projectsHeader,
@@ -15,6 +17,7 @@ import {
 import ProjectsData from "../../shared/opensource/projects.json";
 import "./Projects.css";
 import ProjectsImg from "./ProjectsImg";
+import ReactPlayer from "react-player";
 
 class Projects extends Component {
   render() {
@@ -54,6 +57,22 @@ class Projects extends Component {
             return <GithubRepoCard repo={repo} theme={theme} />;
           })}
         </div>
+        <div className="player-container">
+          <ReactPlayer
+            url="https://vimeo.com/760420875?share=copy"
+            controls="true"
+            className="player"
+          />
+          <ReactPlayer
+            url="https://vimeo.com/758513189?share=copy"
+            controls="true"
+            className="player"
+          />
+        </div>
+        <div className="image-container">
+          <img src={micah} />
+          <img src={swift} />
+        </div>
         <Button
           text={"More Projects"}
           className="project-button"
@@ -91,7 +110,6 @@ class Projects extends Component {
             return <PublicationCard pub={pub} theme={theme} />;
           })}
         </div>
-
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />
       </div>

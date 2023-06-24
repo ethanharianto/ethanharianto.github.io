@@ -33,15 +33,15 @@ class DegreeCard extends Component {
               style={{ backgroundColor: theme.headerColor }}
             >
               <div className="body-header-title">
-                <h2 className="card-title" style={{ color: theme.text }}>
+                <h2 className="card-title" style={{ color: theme.dark }}>
                   {degree.title}
                 </h2>
-                <h3 className="card-subtitle" style={{ color: theme.text }}>
+                <h3 className="card-subtitle" style={{ color: theme.dark }}>
                   {degree.subtitle}
                 </h3>
               </div>
               <div className="body-header-duration">
-                <h3 className="duration" style={{ color: theme.text }}>
+                <h3 className="duration" style={{ color: theme.dark }}>
                   {degree.duration}
                 </h3>
               </div>
@@ -54,22 +54,22 @@ class DegreeCard extends Component {
                   </p>
                 );
               })}
-              {degree.website_link && (
-                <a
-                  href={degree.website_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className="visit-btn"
-                    style={{ backgroundColor: theme.headerColor }}
-                  >
-                    <p className="btn" style={{ color: theme.text }}>
-                      Visit Website
-                    </p>
-                  </div>
-                </a>
-              )}
+              {/* {degree.website_link && (
+                // <a
+                //   href={degree.website_link}
+                //   target="_blank"
+                //   rel="noopener noreferrer"
+                // >
+                //   <div
+                //     className="visit-btn"
+                //     style={{ backgroundColor: theme.headerColor }}
+                //   >
+                //     <p className="btn" style={{ color: theme.text }}>
+                //       Visit Website
+                //     </p>
+                //   </div>
+                // </a>
+              )} */}
             </div>
           </div>
         </Fade>
