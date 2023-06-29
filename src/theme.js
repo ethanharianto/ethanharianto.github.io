@@ -196,7 +196,7 @@ export const materialTealTheme = {
 };
 
 export const myTheme = {
-  body: "#1f2020",
+  body: "linear-gradient(180deg, #271f30 0%, #1f2020 100%)",
   text: "#ffffff",
   expTxtColor: "#000000",
   highlight: "#672bff",
@@ -206,7 +206,7 @@ export const myTheme = {
   compImgHighlight: "#E1E2E1",
   jacketColor: "#000000",
   headerColor: "#E1E2E1",
-  splashBg: "#1f2020",
+  splashBg: "linear-gradient(180deg, #271f30 0%, #1f2020 100%)",
 };
 
 export const chosenTheme = myTheme;

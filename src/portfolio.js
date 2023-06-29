@@ -421,6 +421,15 @@ const certifications = {
       alt_name: "Lyft",
       color_code: "#ffffff",
     },
+    {
+      title: "Software Engineering Virtual Experience",
+      subtitle: "- Chase",
+      logo_path: "chase_logo.png",
+      certificate_link:
+        "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/R5iK7HMxJGBgaSbvk_J.P.%20Morgan_weq6CyE6oaqjb9yvG_1688006466045_completion_certificate.pdf",
+      alt_name: "Chase",
+      color_code: "#ffffff",
+    },
   ],
 };
 
@@ -499,7 +508,7 @@ const experience = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "I have done many projects in the areas of computer science and design. Below are my pinned GitHub repositories, two video edits I made for friends, and two graphic edits I made for personal use.",
+    "I have done many projects in the areas of computer science and design. Below are my pinned GitHub repositories.", //two video edits I made for friends, and two graphic edits I made for personal use.
 };
 
 const publicationsHeader = {

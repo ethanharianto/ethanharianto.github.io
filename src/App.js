@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Main from "./containers/Main";
 import { ThemeProvider } from "styled-components";
@@ -7,6 +7,17 @@ import { GlobalStyles } from "./global";
 import CustomCursor from "./CustomCursor";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    setIsMobile(
+      /(android|webos|iphone|ipad|ipod|blackberry|windows phone)/.test(
+        userAgent
+      )
+    );
+  }, []);
+
   return (
     <>
       <ThemeProvider theme={chosenTheme}>
@@ -17,7 +28,7 @@ function App() {
           </div>
         </>
       </ThemeProvider>
-      <CustomCursor />
+      {!isMobile && <CustomCursor />}
     </>
   );
 }

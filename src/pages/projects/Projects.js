@@ -57,22 +57,20 @@ class Projects extends Component {
             return <GithubRepoCard repo={repo} theme={theme} />;
           })}
         </div>
-        <div className="player-container">
+        {/* <div className="player-container"><ReactPlayer
+          url="https://vimeo.com/758513189?share=copy"
+          controls="true"
+          className="player"
+        />
           <ReactPlayer
             url="https://vimeo.com/760420875?share=copy"
             controls="true"
             className="player"
           />
-          <ReactPlayer
-            url="https://vimeo.com/758513189?share=copy"
-            controls="true"
-            className="player"
-          />
-        </div>
-        <div className="image-container">
           <img src={micah} />
           <img src={swift} />
-        </div>
+        </div> */}
+
         <Button
           text={"More Projects"}
           className="project-button"
