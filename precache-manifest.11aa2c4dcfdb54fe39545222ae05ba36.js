@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7b1b61ab7c19dedb4e43cfed1a87ad84",
+    "revision": "70bbc8b059937d47e804a4bd1dadc70d",
     "url": "/index.html"
   },
   {
-    "revision": "f1ad3311e8044f2cea95",
+    "revision": "dcd5159d5492e1b5fcea",
     "url": "/static/css/main.f0e56a64.chunk.css"
   },
   {
-    "revision": "4847fffb3daf3fc67cae",
-    "url": "/static/js/2.3f677885.chunk.js"
+    "revision": "cc047b72842b4f5c06f5",
+    "url": "/static/js/2.aa2ca0be.chunk.js"
   },
   {
-    "revision": "f1ad3311e8044f2cea95",
-    "url": "/static/js/main.5825468c.chunk.js"
+    "revision": "dcd5159d5492e1b5fcea",
+    "url": "/static/js/main.9494b36f.chunk.js"
   },
   {
     "revision": "23736f7796570d78ecc5",
@@ -78,6 +78,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "058eca4cbdc03a1dad9a6bb943ac7831",
     "url": "/static/media/blogs_image.058eca4c.svg"
+  },
+  {
+    "revision": "ab67f37ef5a5da694f2ba94111701dfd",
+    "url": "/static/media/chase_logo.ab67f37e.png"
   },
   {
     "revision": "cacbc42b661f39344af81c631d8d36a9",
