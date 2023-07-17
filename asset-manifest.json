@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.eceb4544.chunk.css",
-    "main.js": "/static/js/main.d6cff7ba.chunk.js",
-    "main.js.map": "/static/js/main.d6cff7ba.chunk.js.map",
+    "main.js": "/static/js/main.73d98a9f.chunk.js",
+    "main.js.map": "/static/js/main.73d98a9f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.498e47c5.js",
     "runtime-main.js.map": "/static/js/runtime-main.498e47c5.js.map",
-    "static/js/2.3f677885.chunk.js": "/static/js/2.3f677885.chunk.js",
-    "static/js/2.3f677885.chunk.js.map": "/static/js/2.3f677885.chunk.js.map",
+    "static/js/2.79ad5c6e.chunk.js": "/static/js/2.79ad5c6e.chunk.js",
+    "static/js/2.79ad5c6e.chunk.js.map": "/static/js/2.79ad5c6e.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b3953af48d9909fb5864884b8201bec3.js": "/precache-manifest.b3953af48d9909fb5864884b8201bec3.js",
+    "precache-manifest.27d0ffd465bb234d5400c28cc9262f83.js": "/precache-manifest.27d0ffd465bb234d5400c28cc9262f83.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.eceb4544.chunk.css.map": "/static/css/main.eceb4544.chunk.css.map",
     "static/media/index.css": "/static/media/Montserrat-Regular.ee653992.ttf",
@@ -16,6 +16,7 @@
     "static/media/Lyft_logo.png": "/static/media/Lyft_logo.73811082.png",
     "static/media/SU_logo.png": "/static/media/SU_logo.bf0c57c6.png",
     "static/media/address_image.svg": "/static/media/address_image.16559172.svg",
+    "static/media/animated_ashutosh.png": "/static/media/animated_ashutosh.eaf02c2d.png",
     "static/media/animated_logo.svg": "/static/media/animated_logo.dcd6dee2.svg",
     "static/media/blogs_image.svg": "/static/media/blogs_image.058eca4c.svg",
     "static/media/chase_logo.png": "/static/media/chase_logo.ab67f37e.png",
@@ -62,8 +63,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.498e47c5.js",
-    "static/js/2.3f677885.chunk.js",
+    "static/js/2.79ad5c6e.chunk.js",
     "static/css/main.eceb4544.chunk.css",
-    "static/js/main.d6cff7ba.chunk.js"
+    "static/js/main.73d98a9f.chunk.js"
   ]
 }
