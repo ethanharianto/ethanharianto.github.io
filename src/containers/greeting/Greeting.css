@@ -4,6 +4,7 @@
   margin: 0px auto;
   margin-top: 4rem;
 }
+
 .greet-main {
   width: 90%;
   padding: 20px 10px;
@@ -33,7 +34,7 @@
 .greeting-text {
   margin-top: 80px;
   font-size: 70px;
-  line-height: 1.1;
+  line-height: 1;
   font-family: "Google Sans Bold";
 }
 
@@ -45,7 +46,7 @@
 
 .greeting-text-p {
   font-size: 40px;
-  line-height: 40px;
+  line-height: 45px;
   margin-right: 40px;
   font-family: "Google Sans Medium";
 }

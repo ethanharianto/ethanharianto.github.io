@@ -1,7 +1,943 @@
 {
-  "closed": 0,
-  "data": [],
-  "merged": 0,
-  "open": 0,
-  "totalCount": 0
+  "closed": 9,
+  "data": [
+    {
+      "id": "PR_kwDOIq5am85bDbO8",
+      "title": "Fixed Double Requests",
+      "url": "https://github.com/ethanharianto/Slide/pull/90",
+      "state": "OPEN",
+      "mergedBy": null,
+      "createdAt": "2023-09-24T07:15:02Z",
+      "number": 90,
+      "changedFiles": 1,
+      "additions": 51,
+      "deletions": 0,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85am369",
+      "title": "Privacy Policy/logo images update",
+      "url": "https://github.com/ethanharianto/Slide/pull/86",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-09-18T19:59:01Z",
+      "number": 86,
+      "changedFiles": 19,
+      "additions": 191,
+      "deletions": 95,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85aTOZK",
+      "title": "Friend fixes",
+      "url": "https://github.com/ethanharianto/Slide/pull/77",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-09-14T06:01:53Z",
+      "number": 77,
+      "changedFiles": 14,
+      "additions": 96,
+      "deletions": 121,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85aQP_T",
+      "title": "Highlights Sorting Update",
+      "url": "https://github.com/ethanharianto/Slide/pull/74",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-09-13T16:30:05Z",
+      "number": 74,
+      "changedFiles": 12,
+      "additions": 144,
+      "deletions": 52,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85aLyUw",
+      "title": "Bug Fixes",
+      "url": "https://github.com/ethanharianto/Slide/pull/71",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-09-13T01:22:52Z",
+      "number": 71,
+      "changedFiles": 3,
+      "additions": 15,
+      "deletions": 29,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85aFb_A",
+      "title": "Ethan",
+      "url": "https://github.com/ethanharianto/Slide/pull/69",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+        "url": "https://github.com/ethanharianto",
+        "login": "ethanharianto"
+      },
+      "createdAt": "2023-09-12T05:04:23Z",
+      "number": 69,
+      "changedFiles": 45,
+      "additions": 889,
+      "deletions": 227,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85Z5CaJ",
+      "title": "Ethan",
+      "url": "https://github.com/ethanharianto/Slide/pull/62",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-09-08T15:52:41Z",
+      "number": 62,
+      "changedFiles": 18,
+      "additions": 1447,
+      "deletions": 128,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85ZadLv",
+      "title": "UI/Initialization update",
+      "url": "https://github.com/ethanharianto/Slide/pull/60",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+        "url": "https://github.com/ethanharianto",
+        "login": "ethanharianto"
+      },
+      "createdAt": "2023-09-02T23:38:42Z",
+      "number": 60,
+      "changedFiles": 23,
+      "additions": 508,
+      "deletions": 424,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85Y2maY",
+      "title": "UI/Event Struct Updates",
+      "url": "https://github.com/ethanharianto/Slide/pull/56",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-08-26T16:25:42Z",
+      "number": 56,
+      "changedFiles": 39,
+      "additions": 822,
+      "deletions": 698,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85Yzq6F",
+      "title": "UI/Event Struct Updates",
+      "url": "https://github.com/ethanharianto/Slide/pull/55",
+      "state": "CLOSED",
+      "mergedBy": null,
+      "createdAt": "2023-08-25T15:45:05Z",
+      "number": 55,
+      "changedFiles": 39,
+      "additions": 822,
+      "deletions": 698,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85YzTRb",
+      "title": "UI Update",
+      "url": "https://github.com/ethanharianto/Slide/pull/54",
+      "state": "CLOSED",
+      "mergedBy": null,
+      "createdAt": "2023-08-25T14:32:53Z",
+      "number": 54,
+      "changedFiles": 26,
+      "additions": 591,
+      "deletions": 385,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85Yy-i2",
+      "title": "Event Details show RSVPs",
+      "url": "https://github.com/ethanharianto/Slide/pull/53",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+        "url": "https://github.com/ethanharianto",
+        "login": "ethanharianto"
+      },
+      "createdAt": "2023-08-25T13:36:13Z",
+      "number": 53,
+      "changedFiles": 4,
+      "additions": 498,
+      "deletions": 77,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85YjNxl",
+      "title": "UI Update",
+      "url": "https://github.com/ethanharianto/Slide/pull/51",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-08-23T01:56:32Z",
+      "number": 51,
+      "changedFiles": 8,
+      "additions": 141,
+      "deletions": 91,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85YcT6h",
+      "title": "Event Details/Settings Update",
+      "url": "https://github.com/ethanharianto/Slide/pull/50",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-08-22T01:51:51Z",
+      "number": 50,
+      "changedFiles": 17,
+      "additions": 400,
+      "deletions": 206,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85YSlNS",
+      "title": "Profile Update",
+      "url": "https://github.com/ethanharianto/Slide/pull/47",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-08-19T02:26:07Z",
+      "number": 47,
+      "changedFiles": 118,
+      "additions": 1292,
+      "deletions": 1297,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85YRATB",
+      "title": "Profile Update",
+      "url": "https://github.com/ethanharianto/Slide/pull/46",
+      "state": "CLOSED",
+      "mergedBy": null,
+      "createdAt": "2023-08-18T17:06:18Z",
+      "number": 46,
+      "changedFiles": 118,
+      "additions": 1292,
+      "deletions": 1297,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85YQ_CR",
+      "title": "Profile Update",
+      "url": "https://github.com/ethanharianto/Slide/pull/45",
+      "state": "CLOSED",
+      "mergedBy": null,
+      "createdAt": "2023-08-18T17:00:49Z",
+      "number": 45,
+      "changedFiles": 114,
+      "additions": 1104,
+      "deletions": 941,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85YL0ge",
+      "title": "Profile Update 1/2",
+      "url": "https://github.com/ethanharianto/Slide/pull/44",
+      "state": "CLOSED",
+      "mergedBy": null,
+      "createdAt": "2023-08-17T18:24:30Z",
+      "number": 44,
+      "changedFiles": 114,
+      "additions": 1104,
+      "deletions": 941,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85YHNFU",
+      "title": "Drawer and Details Updates",
+      "url": "https://github.com/ethanharianto/Slide/pull/42",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-08-17T02:41:23Z",
+      "number": 42,
+      "changedFiles": 10,
+      "additions": 734,
+      "deletions": 287,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85YBSn5",
+      "title": "EventDetails UI Update 2",
+      "url": "https://github.com/ethanharianto/Slide/pull/38",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-08-16T02:13:38Z",
+      "number": 38,
+      "changedFiles": 12,
+      "additions": 179,
+      "deletions": 179,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85YBSB7",
+      "title": "Consolidated event data types",
+      "url": "https://github.com/ethanharianto/Slide/pull/37",
+      "state": "CLOSED",
+      "mergedBy": null,
+      "createdAt": "2023-08-16T02:09:29Z",
+      "number": 37,
+      "changedFiles": 12,
+      "additions": 200,
+      "deletions": 183,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85YA3uF",
+      "title": "Consolidated event data types",
+      "url": "https://github.com/ethanharianto/Slide/pull/35",
+      "state": "CLOSED",
+      "mergedBy": null,
+      "createdAt": "2023-08-15T23:16:19Z",
+      "number": 35,
+      "changedFiles": 12,
+      "additions": 108,
+      "deletions": 147,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85X8DQZ",
+      "title": "Event Details UI update",
+      "url": "https://github.com/ethanharianto/Slide/pull/33",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-08-15T02:49:52Z",
+      "number": 33,
+      "changedFiles": 11,
+      "additions": 235,
+      "deletions": 20,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85X1LGS",
+      "title": "Event Banner fix",
+      "url": "https://github.com/ethanharianto/Slide/pull/30",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-08-14T00:42:55Z",
+      "number": 30,
+      "changedFiles": 8,
+      "additions": 116,
+      "deletions": 141,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85Xxd5j",
+      "title": "Event Banner, Refactor, and UI Updates",
+      "url": "https://github.com/ethanharianto/Slide/pull/28",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-08-12T02:40:31Z",
+      "number": 28,
+      "changedFiles": 69,
+      "additions": 1551,
+      "deletions": 1589,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85XD5L8",
+      "title": "Image Picker Fix",
+      "url": "https://github.com/ethanharianto/Slide/pull/23",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-08-03T01:38:33Z",
+      "number": 23,
+      "changedFiles": 17,
+      "additions": 355,
+      "deletions": 326,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85W9p5-",
+      "title": "Event Map and Event Creation UI Rehaul (WIP)",
+      "url": "https://github.com/ethanharianto/Slide/pull/22",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/68267254?v=4",
+        "url": "https://github.com/VaishnavGarodia",
+        "login": "VaishnavGarodia"
+      },
+      "createdAt": "2023-08-02T02:06:59Z",
+      "number": 22,
+      "changedFiles": 10,
+      "additions": 262,
+      "deletions": 152,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85W3dAv",
+      "title": "Map UI Start",
+      "url": "https://github.com/ethanharianto/Slide/pull/20",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/68267254?v=4",
+        "url": "https://github.com/VaishnavGarodia",
+        "login": "VaishnavGarodia"
+      },
+      "createdAt": "2023-08-01T04:37:54Z",
+      "number": 20,
+      "changedFiles": 28,
+      "additions": 841,
+      "deletions": 910,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85Wv5-A",
+      "title": "Image Caching/Friendship Code",
+      "url": "https://github.com/ethanharianto/Slide/pull/18",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/68267254?v=4",
+        "url": "https://github.com/VaishnavGarodia",
+        "login": "VaishnavGarodia"
+      },
+      "createdAt": "2023-07-31T02:11:56Z",
+      "number": 18,
+      "changedFiles": 18,
+      "additions": 712,
+      "deletions": 161,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85Wvhpa",
+      "title": "Event Gallery Code",
+      "url": "https://github.com/ethanharianto/Slide/pull/17",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+        "url": "https://github.com/ethanharianto",
+        "login": "ethanharianto"
+      },
+      "createdAt": "2023-07-30T23:31:27Z",
+      "number": 17,
+      "changedFiles": 5,
+      "additions": 227,
+      "deletions": 30,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85WsvSd",
+      "title": "Changed the way profile pictures are loaded (Google users now have th…",
+      "url": "https://github.com/ethanharianto/Slide/pull/13",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/68267254?v=4",
+        "url": "https://github.com/VaishnavGarodia",
+        "login": "VaishnavGarodia"
+      },
+      "createdAt": "2023-07-29T01:02:08Z",
+      "number": 13,
+      "changedFiles": 23,
+      "additions": 685,
+      "deletions": 393,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85WmYXX",
+      "title": "Rehauled Settings page UI",
+      "url": "https://github.com/ethanharianto/Slide/pull/11",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/68267254?v=4",
+        "url": "https://github.com/VaishnavGarodia",
+        "login": "VaishnavGarodia"
+      },
+      "createdAt": "2023-07-27T23:37:40Z",
+      "number": 11,
+      "changedFiles": 10,
+      "additions": 272,
+      "deletions": 194,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85Wfy02",
+      "title": "Ethan",
+      "url": "https://github.com/ethanharianto/Slide/pull/9",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/122665959?v=4",
+        "url": "https://github.com/Nidjay78",
+        "login": "Nidjay78"
+      },
+      "createdAt": "2023-07-27T01:20:24Z",
+      "number": 9,
+      "changedFiles": 19,
+      "additions": 527,
+      "deletions": 199,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85WZJ-H",
+      "title": "Ethan/Thomas",
+      "url": "https://github.com/ethanharianto/Slide/pull/8",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/122665959?v=4",
+        "url": "https://github.com/Nidjay78",
+        "login": "Nidjay78"
+      },
+      "createdAt": "2023-07-26T02:22:03Z",
+      "number": 8,
+      "changedFiles": 27,
+      "additions": 337,
+      "deletions": 501,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85WYkBs",
+      "title": "Ethan",
+      "url": "https://github.com/ethanharianto/Slide/pull/7",
+      "state": "CLOSED",
+      "mergedBy": null,
+      "createdAt": "2023-07-25T22:50:17Z",
+      "number": 7,
+      "changedFiles": 19,
+      "additions": 166,
+      "deletions": 313,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85WYV2L",
+      "title": "Ethan",
+      "url": "https://github.com/ethanharianto/Slide/pull/6",
+      "state": "CLOSED",
+      "mergedBy": null,
+      "createdAt": "2023-07-25T21:47:00Z",
+      "number": 6,
+      "changedFiles": 19,
+      "additions": 166,
+      "deletions": 313,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85WXUql",
+      "title": "Ethan",
+      "url": "https://github.com/ethanharianto/Slide/pull/5",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/120894942?v=4",
+        "url": "https://github.com/tshundi",
+        "login": "tshundi"
+      },
+      "createdAt": "2023-07-25T18:32:52Z",
+      "number": 5,
+      "changedFiles": 54,
+      "additions": 1275,
+      "deletions": 550,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85WIvk9",
+      "title": "Ethan",
+      "url": "https://github.com/ethanharianto/Slide/pull/2",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/122665959?v=4",
+        "url": "https://github.com/Nidjay78",
+        "login": "Nidjay78"
+      },
+      "createdAt": "2023-07-22T01:40:52Z",
+      "number": 2,
+      "changedFiles": 56,
+      "additions": 1412,
+      "deletions": 802,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    },
+    {
+      "id": "PR_kwDOIq5am85VW2JJ",
+      "title": "Ethan",
+      "url": "https://github.com/ethanharianto/Slide/pull/1",
+      "state": "MERGED",
+      "mergedBy": {
+        "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+        "url": "https://github.com/ethanharianto",
+        "login": "ethanharianto"
+      },
+      "createdAt": "2023-07-12T22:12:09Z",
+      "number": 1,
+      "changedFiles": 325,
+      "additions": 8609,
+      "deletions": 2381,
+      "baseRepository": {
+        "name": "Slide",
+        "url": "https://github.com/ethanharianto/Slide",
+        "owner": {
+          "avatarUrl": "https://avatars.githubusercontent.com/u/79932428?u=6a3bfc9ef80047068bb99cd15fcd5f86c450c971&v=4",
+          "login": "ethanharianto",
+          "url": "https://github.com/ethanharianto"
+        }
+      }
+    }
+  ],
+  "merged": 29,
+  "open": 1,
+  "totalCount": 39
 }

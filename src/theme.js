@@ -196,7 +196,7 @@ export const materialTealTheme = {
 };
 
 export const myTheme = {
-  body: "linear-gradient(180deg, #271f30 0%, #1f2020 100%)",
+  body: "#26202e",
   text: "#ffffff",
   expTxtColor: "#000000",
   highlight: "#672bff",

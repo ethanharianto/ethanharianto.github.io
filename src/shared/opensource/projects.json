@@ -1,16 +1,64 @@
 {
   "data": [
     {
-      "id": "R_kgDOJyz07Q",
-      "name": "Forage-Lyft-Micro-Internship",
-      "createdAt": "2023-06-22T16:56:24Z",
-      "url": "https://github.com/ethanharianto/Forage-Lyft-Micro-Internship",
-      "description": "Lyft starter repo",
-      "isFork": true,
+      "id": "R_kgDOJzYs3w",
+      "name": "ethanharianto.github.io",
+      "createdAt": "2023-06-24T03:38:15Z",
+      "url": "https://github.com/ethanharianto/ethanharianto.github.io",
+      "description": "Portfolio Website",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Dockerfile",
+          "iconifyClass": "simple-icons:docker"
+        },
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        },
+        {
+          "name": "HTML",
+          "iconifyClass": "logos-html-5"
+        },
+        {
+          "name": "CSS",
+          "iconifyClass": "logos-css-3"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOKlQK9w",
+      "name": "Data-Analysis-with-Python",
+      "createdAt": "2023-10-26T05:59:36Z",
+      "url": "https://github.com/ethanharianto/Data-Analysis-with-Python",
+      "description": null,
+      "isFork": false,
       "languages": [
         {
           "name": "Python",
           "iconifyClass": "logos-python"
+        },
+        {
+          "name": "Shell",
+          "iconifyClass": "simple-icons:shell"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOKVO1Cg",
+      "name": "Scientific-Computing-With-Python",
+      "createdAt": "2023-09-18T21:24:09Z",
+      "url": "https://github.com/ethanharianto/Scientific-Computing-With-Python",
+      "description": null,
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "Shell",
+          "iconifyClass": "simple-icons:shell"
         }
       ]
     },
@@ -33,13 +81,40 @@
       ]
     },
     {
-      "id": "R_kgDOJzYs3w",
-      "name": "ethanharianto.github.io",
-      "createdAt": "2023-06-24T03:38:15Z",
-      "url": "https://github.com/ethanharianto/ethanharianto.github.io",
-      "description": "Portfolio Website",
+      "id": "R_kgDOJyz07Q",
+      "name": "Forage-Lyft-Micro-Internship",
+      "createdAt": "2023-06-22T16:56:24Z",
+      "url": "https://github.com/ethanharianto/Forage-Lyft-Micro-Internship",
+      "description": "Lyft starter repo",
+      "isFork": true,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOJ5n97A",
+      "name": "Random-Quote-Generator",
+      "createdAt": "2023-07-09T21:52:42Z",
+      "url": "https://github.com/ethanharianto/Random-Quote-Generator",
+      "description": "A Random Quote Generator Website I made for the freeCodeCamp curriculum",
       "isFork": false,
-      "languages": []
+      "languages": [
+        {
+          "name": "HTML",
+          "iconifyClass": "logos-html-5"
+        },
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        },
+        {
+          "name": "CSS",
+          "iconifyClass": "logos-css-3"
+        }
+      ]
     }
   ]
 }
