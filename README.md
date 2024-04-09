@@ -1,16 +1,15 @@
+
 <p align="center"> 
     <img src="images/masterportfolio-banner-light.png" align="center" height="150"></img>
 </p>
 
-<h1 align="center"> Software Developer Master Portfolio 🔥 </h1> 
-<h3 align="center"> A clean, beautiful, responsive, and 100% customizable portfolio <br /> template for Software Developers! </h3>
+<h1 align="center"> Ethan Harianto's Portfolio </h1> 
+<h3 align="center"> A clean, beautiful, and responsive portfolio <br /> showing off my work. </h3>
 
 <p align="center">
-  <a href="http://hits.dwyl.com/ashutosh1919/masterPortfolio"><img alt="HitCounts" src="http://hits.dwyl.com/ashutosh1919/masterPortfolio.svg" /></a>
   <a href="https://nodejs.org/en/blog/release/v12.13.0/"><img alt="NodeJS" src="https://img.shields.io/badge/node-12.14.1-important?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/npm/v/6.13.4"><img alt="NPM" src="https://img.shields.io/badge/npm-6.13.7-blueviolet?style=flat-square" /></a>
   <a href="https://reactjs.org/"><img alt="Made With React" src="https://img.shields.io/badge/made%20with-react-61DAFB?style=flat-square" /></a>
-  <a href="https://join.slack.com/t/masterportfolio/shared_invite/zt-g772n1fo-Ns4usanURF8jVb8wk2lRAA"><img alt="Join Slack Channel For Support" src="https://img.shields.io/badge/slack-masterPortfolio-yellow.svg?logo=slack?style=flat-square" /></a>
   <a href="https://github.com/prettier/prettier"><img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square?style=flat-square" /></a>
   <br/>
   <a href="https://app.netlify.com/sites/ashutosh1919portfolio/deploys"><img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/abf59f82-3251-4040-b24c-949b86691642/deploy-status?style=flat-square" /></a>
@@ -21,28 +20,18 @@
   <a href="https://ashutoshhathidara.com/"><img alt="License" src="http://img.shields.io/:license-mit-blue.svg?style=flat-square?style=flat-square" /></a>
   <a href="https://img.shields.io/badge/price-free-ff69b4"><img alt="Price" src="https://img.shields.io/badge/price-free-ff69b4?style=flat-square" /></a>
 </p>
-<p align="center">If you want to discuss about something, you can ask on my <a href="https://discord.com/invite/GkcbM5bwZr">Discord Server</a>.</p>
-
-<p align="center"> 
-    <a href="https://ashutosh1919.github.io" target="_blank">
-    <img src="images/masterPortfolioThemes.png"></img>
-  </a>
-</p>
-
-:star: Star us on GitHub — it helps!
 
 # Sections 📚
 
-✔️ Summary and About me\
+✔️ Summary and About Me\
 ✔️ Skills \
 ✔️ Open Source Projects Connected with Github\
 ✔️ Experience\
 ✔️ Certifications 🏆\
-✔️ Blogs\
 ✔️ Education\
 ✔️ Contact me
 
-To view a live example, **[click here](https://ashutosh1919.github.io/)**
+To view a live example, **[click here](https://ethanharianto.github.io/)**
 
 # Clone and Use 📋
 
@@ -51,7 +40,7 @@ To view a live example, **[click here](https://ashutosh1919.github.io/)**
 - In case you want to help developing it or simply saving it, you can fork the repository just by clicking the button on the top-right corner of this page
 - After the successful installation of `nodejs` and `npm`, clone the repository into your local system using below command:
   ```bash
-   git clone https://github.com/ashutosh1919/masterPortfolio.git
+   git clone https://github.com/ethanharianto/ethanharianto.github.io
   ```
   This will clone the whole repository in your system.
 - To download required dependencies to your system, navigate to the directory where the cloned repository resides and execute following command:
@@ -130,13 +119,12 @@ Whenever you want to update the github related information on the website you ne
 
 ### Splash Logo
 
-Note here that if you click [my portfolio](https://ashutosh1919.github.io), you can see animating the logo at the beginning. I have designed that logo in [`Figma`](https://www.figma.com/) and then animated it using css.
-Therefore, this part of portfolio is not customizable. But don't worry we have a solution to this problem. You have below two alternatives:
+Note here that if you click [my portfolio](https://ethanharianto.github.io), you can see animating the logo at the beginning. I have designed that logo in [`GIMP`](https://www.gimp.org/) and then animated it using css.
+Unfortunately, that means this part of portfolio is not customizable. Don't worry though, we have a solution to this problem. You have two alternatives:
 
-- If you want to design your own logo, then you can design it using `Figma` or `Adobe XD` or `Adobe Illustrator` or `Inkscape`. If you want to animate it, you can refer to `./src/components/Loader` directory which contains `js` and `css` files which animates the logo
-- If you don't want Splash screen or you don't know how to design logo, then this option is for you
-
-  - You can open `src/portfolio.js` file and at the top of this file you will see `settings` component as below:
+- If you want to design your own logo, you can design it using whichever program you would like. If you want to animate it, you can refer to `./src/components/Loader` directory which contains `js` and `css` files which animates the logo
+- If you don't want the splash screen or you don't know how to design a logo, then this option is for you
+  - You can open `src/portfolio.js` file and at the top of this file you will see a `settings` component as below:
     ```javascript
     // Website related settings
     const settings = {
@@ -145,7 +133,7 @@ Therefore, this part of portfolio is not customizable. But don't worry we have a
     ```
   - Change `isSplash` from `true` to `false`
   - Now, if you see your website using `npm start`, it will directly open `home` rather than animating logo `splash` screen
-  - If you design your logo in future, then edit the files in `./src/components/Loader` and then revert `isSplash` to `true` in `src/portfolio.js`.
+  - If you design your logo in the future, then you can revert `isSplash` to `true` in `src/portfolio.js`.
 
 ## Other
 
@@ -167,28 +155,11 @@ Therefore, this part of portfolio is not customizable. But don't worry we have a
 
 - Once you are done with your setup and have successfully completed all steps above, you need to put your website online!
 - I highly recommend using [Github Pages](https://create-react-app.dev/docs/deployment/#github-pages) to achieve this the EASIEST WAY.
-- To deploy your website, you have two options. First you need to create a github repository with the name `<your-github-username>.github.io`. Please don't give it any other name.
+- To deploy your website, you have two options. First you need to create a github repository with the name `<your-github-username>.github.io`. It does not work otherwise
 - Now, you need to generate a production build and deploy the website.
-
-**Option 1:**
-
 - Run `npm run build` to generate the production build folder.
 - Enter the build folder, `git init` and push the generated code to the `master` branch of your new repository on github. That's it. It's Done.
 - You may need to `git init` and force push at every new build.
-
-**Option 2 (will not work with [user pages](https://docs.github.com/en/github/working-with-github-pages/about-github-pages)):**
-
-- Run `npm run deploy` to build and create a branch called `gh-pages`. It will push the `build` files to that branch.
-- The last step in deploying is to enable `Github Pages` in settings of the repository and select `gh-pages` branch.
-
-Now, your website is successfully deployed and you can visit it at `<your-github-username>.github.io`.  
-If you are stuck somewhere and want to observe the deployment process in depth, then please watch below video.
-
-<p align="center"> 
-    <a href="http://www.youtube.com/watch?v=IwBS39TOmpA" target="_blank">
-    <img src="http://img.youtube.com/vi/IwBS39TOmpA/0.jpg"></img>
-  </a>
-</p>
 
 # Technologies used 🛠️
 
@@ -198,6 +169,7 @@ If you are stuck somewhere and want to observe the deployment process in depth, 
 - [baseui](https://github.com/uber/baseweb)
 - [react-reveal](https://www.react-reveal.com/)
 - [styled-components](https://styled-components.com/)
+- [firebase](https://firebase.google.com)
 
 # illustrations 🍥
 
@@ -206,15 +178,6 @@ If you are stuck somewhere and want to observe the deployment process in depth, 
 # License 📄
 
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
-
-# Contributing 💡
-
-If you can help us with these. Please don't hesitate to open an [pull request](https://github.com/ashutosh1919/masterPortfolio/pulls) or [issue](https://github.com/ashutosh1919/masterPortfolio/issues).
-
-- Move to Gatsby
-- Add Podcast Section and Video Section
-- Add tests to automate review.
-- Setup Travis workflow.
 
 # Contributors ✨
 
@@ -262,6 +225,7 @@ If you can help us with these. Please don't hesitate to open an [pull request](h
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://cdigruttola.it"><img src="https://avatars.githubusercontent.com/u/9153905?v=4?s=100" width="100px;" alt="Carmine Di Gruttola"/><br /><sub><b>Carmine Di Gruttola</b></sub></a><br /><a href="#ideas-cdigruttola" title="Ideas, Planning, & Feedback">🤔</a> <a href="#promotion-cdigruttola" title="Promotion">📣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Vyomrana02"><img src="https://avatars.githubusercontent.com/u/87069619?v=4?s=100" width="100px;" alt="Vyom Rana"/><br /><sub><b>Vyom Rana</b></sub></a><br /><a href="https://github.com/ashutosh1919/masterPortfolio/commits?author=Vyomrana02" title="Code">💻</a></td>
+            <td align="center" valign="top" width="14.28%"><a href="https://github.com/ethanharianto"><img src="https://avatars.githubusercontent.com/ethanharianto?v=4?s=100" width="100px;" alt="Ethan Harianto"/><br /><sub><b>Vyom Rana</b></sub></a><br /><a href="https://github.com/ethanharianto/ethanharianto.github.io/commits?author=ethanharianto" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
