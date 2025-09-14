@@ -65,9 +65,10 @@ const About = () => {
                 transition={{ delay: 0.4, duration: 0.8 }}
                 className="text-lg lg:text-xl text-gray-600 leading-relaxed"
               >
-                As a graduating senior at Stanford University pursuing dual degrees in 
-                Electrical Engineering and Computer Science, I'm passionate about creating 
-                innovative solutions that bridge the physical and digital worlds.
+                I'm Ethan — an engineer who loves turning ideas into things people actually use.
+                I'm studying MS CS and BS EE at Stanford (’26, GPA 3.78). Lately I've built a
+                conversational assistant at Pantheon Lab, an accessibility‑first iOS app at
+                Stanford’s PinCS Lab, and a social app called Slide Social.
               </motion.p>
 
               <motion.p
@@ -76,9 +77,10 @@ const About = () => {
                 transition={{ delay: 0.6, duration: 0.8 }}
                 className="text-lg text-gray-600 leading-relaxed"
               >
-                My unique interdisciplinary background allows me to approach problems 
-                from both hardware and software perspectives, enabling the development 
-                of comprehensive solutions for complex engineering challenges.
+                What I care about: clear, dependable systems and interfaces that feel effortless.
+                I like to roam the stack—Go services and WebRTC on the backend, React/Next.js on
+                the front, and Verilog/FPGA when the problem wants hardware. Right now I’m
+                exploring how to make AI features feel fast, private, and human.
               </motion.p>
             </div>
 
@@ -96,8 +98,9 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">Stanford University</h3>
-                  <p className="text-stanford-red font-semibold">Class of 2025</p>
-                  <p className="text-sm text-gray-600">BS Electrical Engineering & Computer Science</p>
+                  <p className="text-stanford-red font-semibold">Expected June 2026</p>
+                  <p className="text-sm text-gray-600">MS Computer Science & BS Electrical Engineering</p>
+                  <p className="text-sm text-gray-500">GPA: 3.78/4.0</p>
                 </div>
               </div>
             </motion.div>

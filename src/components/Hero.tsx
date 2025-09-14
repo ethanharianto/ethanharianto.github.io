@@ -132,10 +132,10 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-xl sm:text-2xl lg:text-3xl font-light text-gray-200 max-w-4xl mx-auto leading-relaxed mb-6"
           >
-            Electrical Engineering & Computer Science
+            MS CS & BS EE
             <br />
             <span className="bg-gradient-to-r from-stanford-red to-orange-500 bg-clip-text text-transparent font-semibold">
-              Stanford University '25
+              Stanford University ’26
             </span>
           </motion.h2>
 
@@ -146,8 +146,8 @@ const Hero = () => {
             transition={{ delay: 0.7, duration: 0.8 }}
             className="text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
           >
-            Bridging the gap between hardware and software to create
-            innovative solutions that shape the future of technology.
+            I design and ship end‑to‑end systems — from conversational AI pipelines
+            and globally distributed APIs to FPGA‑based digital systems and modern web apps.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -167,7 +167,7 @@ const Hero = () => {
               className="relative overflow-hidden px-8 py-4 rounded-full bg-gradient-to-r from-stanford-red to-red-600 text-white font-semibold text-lg flex items-center gap-2 shadow-xl border border-red-500/20"
             >
               <Download className="w-5 h-5" />
-              Download Resume
+              <a href="/my-website/Ethan_Harianto_Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
             </motion.button>
 

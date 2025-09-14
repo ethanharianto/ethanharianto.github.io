@@ -42,7 +42,7 @@ function App() {
     <div className="relative">
       <Navigation />
       
-      <main>
+      <main id="main">
         <Hero />
         <About />
         <Projects />

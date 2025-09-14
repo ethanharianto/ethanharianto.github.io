@@ -11,63 +11,60 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: "Software Engineering Intern",
-      company: "Apple",
-      location: "Cupertino, CA",
-      period: "Summer 2024",
-      description: "Developed machine learning algorithms for improving neural engine performance on Apple Silicon. Optimized inference pipelines resulting in 15% performance improvement.",
+      title: "Junior Software Developer",
+      company: "Pantheon Lab",
+      location: "Remote",
+      period: "June 2025 – Aug 2025",
+      description: "Shipped core pieces of a conversational assistant and developer platform.",
       achievements: [
-        "Implemented efficient matrix operations for neural network acceleration",
-        "Collaborated with hardware team on silicon-software co-design",
-        "Contributed to Core ML framework optimizations"
+        "Built STT→LLM→TTS→Lip‑Sync pipeline on WebRTC; deployed across multiple regions",
+        "Implemented secure Go backend with rate‑limiting and quotas; ensured high availability",
+        "Launched Next.js self‑service developer portal for API key registration (hours → minutes)"
       ],
-      technologies: ["Swift", "C++", "Metal", "Core ML", "PyTorch"],
-      logo: "🍎"
+      technologies: ["Go", "Next.js", "WebRTC", "TTS/STT", "LLM"],
+      logo: "⚙️"
     },
     {
       id: 2,
-      title: "Hardware Engineering Intern",
-      company: "NVIDIA",
-      location: "Santa Clara, CA",
-      period: "Summer 2023",
-      description: "Worked on GPU architecture verification and performance analysis. Designed and implemented test infrastructure for next-generation graphics processors.",
+      title: "Engineering Lead (Website Project for IYNA)",
+      company: "Develop for Good",
+      location: "Remote",
+      period: "May 2025 – July 2025",
+      description: "Led a no‑cost WordPress workflow and shipped chapter tooling for 50+ global chapters.",
       achievements: [
-        "Built automated verification framework reducing test time by 40%",
-        "Analyzed performance bottlenecks in GPU memory subsystem",
-        "Contributed to RTL design reviews and verification plans"
+        "Devised no‑cost development/collaboration workflow; eliminated server fees",
+        "Built member dashboards and chapter management; reduced admin time ~8 hrs/week"
       ],
-      technologies: ["SystemVerilog", "Python", "CUDA", "Perl", "Linux"],
-      logo: "🟢"
+      technologies: ["WordPress", "JavaScript", "Workflow Automation"],
+      logo: "🌐"
     },
     {
       id: 3,
       title: "Research Assistant",
-      company: "Stanford University",
+      company: "Stanford PinCS Lab",
       location: "Stanford, CA",
-      period: "2022 - Present",
-      description: "Conducting research in computer vision and edge computing under Prof. Smith. Focus on efficient neural network deployment on resource-constrained devices.",
+      period: "Mar 2025 – June 2025",
+      description: "Built an accessibility‑first iOS transcription app powered by AssemblyAI.",
       achievements: [
-        "Published 2 papers in top-tier conferences (ICCV, ISCA)",
-        "Developed novel quantization techniques for edge deployment",
-        "Mentored 3 undergraduate students in research projects"
+        "Swift app for memory recall pilot (early‑stage Alzheimer's)",
+        "Implemented high‑contrast modes, scalable fonts, single‑tap navigation"
       ],
-      technologies: ["Python", "TensorFlow", "OpenCV", "Docker", "AWS"],
-      logo: "🏫"
+      technologies: ["Swift", "SwiftUI", "AssemblyAI"],
+      logo: "🔬"
     },
     {
       id: 4,
-      title: "Full-Stack Developer",
-      company: "TechStart Inc.",
-      location: "San Francisco, CA",
-      period: "Summer 2022",
-      description: "Built scalable web applications for e-commerce platform serving 100k+ users. Led frontend development and collaborated with backend team on API design.",
+      title: "Lead Engineer / Co‑Founder",
+      company: "Slide Social",
+      location: "Remote",
+      period: "Dec 2022 – Sep 2023",
+      description: "Led engineering for a Swift‑based social app from Figma to App Store.",
       achievements: [
-        "Reduced page load times by 60% through optimization",
-        "Implemented real-time inventory management system",
-        "Led migration from React to Next.js improving SEO performance"
+        "Built ~80% of codebase; launched to App Store",
+        "Designed image compression algorithm cutting storage cost >90%"
       ],
-      technologies: ["React", "Next.js", "Node.js", "PostgreSQL", "Redis"],
-      logo: "💻"
+      technologies: ["Swift", "iOS", "Image Processing"],
+      logo: "📱"
     }
   ]
 

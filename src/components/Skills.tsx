@@ -14,11 +14,11 @@ const Skills = () => {
       icon: <Cpu className="w-8 h-8" />,
       color: "from-stanford-red to-stanford-darkred",
       skills: [
-        { name: "FPGA Development", level: 90 },
-        { name: "PCB Design", level: 85 },
-        { name: "Embedded Systems", level: 88 },
-        { name: "Digital Signal Processing", level: 82 },
-        { name: "Circuit Analysis", level: 87 },
+        { name: "Verilog", level: 90 },
+        { name: "FPGA Programming", level: 88 },
+        { name: "Digital Logic Design", level: 86 },
+        { name: "Embedded Systems", level: 84 },
+        { name: "Signal Processing", level: 80 },
       ]
     },
     {
@@ -27,10 +27,10 @@ const Skills = () => {
       color: "from-apple-blue to-blue-600",
       skills: [
         { name: "Python", level: 95 },
-        { name: "C/C++", level: 92 },
+        { name: "Go", level: 88 },
+        { name: "Swift", level: 90 },
         { name: "JavaScript/TypeScript", level: 88 },
-        { name: "Go", level: 80 },
-        { name: "Rust", level: 75 },
+        { name: "C/C++", level: 85 },
       ]
     },
     {
@@ -38,11 +38,11 @@ const Skills = () => {
       icon: <Zap className="w-8 h-8" />,
       color: "from-purple-500 to-purple-700",
       skills: [
-        { name: "TensorFlow/PyTorch", level: 90 },
-        { name: "Computer Vision", level: 85 },
-        { name: "Neural Networks", level: 88 },
-        { name: "MLOps", level: 78 },
-        { name: "Edge Deployment", level: 82 },
+        { name: "PyTorch", level: 88 },
+        { name: "scikit-learn", level: 85 },
+        { name: "Pandas / NumPy", level: 90 },
+        { name: "Computer Vision (YOLOv5)", level: 82 },
+        { name: "RL (Q-learning)", level: 78 },
       ]
     },
     {
@@ -50,11 +50,11 @@ const Skills = () => {
       icon: <Database className="w-8 h-8" />,
       color: "from-green-500 to-green-700",
       skills: [
-        { name: "React/Next.js", level: 92 },
+        { name: "Next.js / React", level: 90 },
         { name: "Node.js", level: 88 },
-        { name: "PostgreSQL/MongoDB", level: 85 },
-        { name: "GraphQL", level: 80 },
-        { name: "RESTful APIs", level: 90 },
+        { name: "Firebase", level: 82 },
+        { name: "REST / GraphQL APIs", level: 86 },
+        { name: "SwiftUI (iOS)", level: 80 },
       ]
     },
     {
@@ -62,11 +62,11 @@ const Skills = () => {
       icon: <Cloud className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
       skills: [
-        { name: "Docker/Kubernetes", level: 85 },
-        { name: "AWS/GCP", level: 82 },
-        { name: "CI/CD Pipelines", level: 88 },
-        { name: "Infrastructure as Code", level: 80 },
-        { name: "Monitoring & Logging", level: 78 },
+        { name: "Docker", level: 82 },
+        { name: "OpenAI / AssemblyAI / Azure STT", level: 88 },
+        { name: "Ollama / LLM Tooling", level: 80 },
+        { name: "CI/CD Basics", level: 78 },
+        { name: "WebRTC (media pipelines)", level: 74 },
       ]
     },
     {
@@ -74,11 +74,11 @@ const Skills = () => {
       icon: <Wrench className="w-8 h-8" />,
       color: "from-gray-600 to-gray-800",
       skills: [
-        { name: "Git/GitHub", level: 95 },
-        { name: "Linux/Unix", level: 90 },
-        { name: "Vivado/Quartus", level: 85 },
-        { name: "KiCad/Altium", level: 82 },
-        { name: "MATLAB/Simulink", level: 88 },
+        { name: "Git / GitHub", level: 95 },
+        { name: "Figma", level: 88 },
+        { name: "Vivado / Quartus", level: 85 },
+        { name: "NodeJS Tooling", level: 86 },
+        { name: "MATLAB / Simulink", level: 78 },
       ]
     },
   ]

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, Globe, FileDown } from 'lucide-react'
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -25,22 +25,30 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted:', formData)
+    const subject = `Portfolio contact from ${formData.name}`
+    const bodyLines = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      '',
+      formData.message,
+    ]
+    const body = encodeURIComponent(bodyLines.join('\n'))
+    const mailto = `mailto:eharianto@stanford.edu?subject=${encodeURIComponent(subject)}&body=${body}`
+    window.location.href = mailto
   }
 
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
       label: "Email",
-      value: "ethan@stanford.edu",
-      href: "mailto:ethan@stanford.edu"
+      value: "eharianto@stanford.edu",
+      href: "mailto:eharianto@stanford.edu"
     },
     {
       icon: <Phone className="w-6 h-6" />,
       label: "Phone",
-      value: "+1 (650) 123-4567",
-      href: "tel:+16501234567"
+      value: "(347) 475-7671",
+      href: "tel:+13474757671"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -60,7 +68,7 @@ const Contact = () => {
     {
       icon: <Linkedin className="w-6 h-6" />,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/ethanharianto",
+      href: "https://linkedin.com/in/ethan-harianto",
       color: "hover:text-blue-600"
     },
     {
@@ -68,6 +76,18 @@ const Contact = () => {
       label: "Twitter",
       href: "https://twitter.com/ethanharianto",
       color: "hover:text-blue-400"
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      label: "Website",
+      href: "https://ethanharianto.github.io/",
+      color: "hover:text-stanford-red"
+    },
+    {
+      icon: <FileDown className="w-6 h-6" />,
+      label: "Resume",
+      href: "/my-website/Ethan_Harianto_Resume.pdf",
+      color: "hover:text-gray-800"
     }
   ]
 
