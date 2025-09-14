@@ -32,8 +32,11 @@ const About = () => {
   ]
 
   return (
-    <section id="about" ref={ref} className="py-20 lg:py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="about" ref={ref} className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(140,21,21,0.1),transparent_50%),radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.1),transparent_50%)]" />
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left Content */}
           <motion.div
@@ -84,16 +87,17 @@ const About = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="glass p-6 rounded-2xl border border-gray-200/50"
+              whileHover={{ y: -5 }}
+              className="glass p-6 rounded-2xl border border-gray-200/50 shadow-xl bg-white/60 backdrop-blur-sm hover:shadow-2xl transition-all duration-300"
             >
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-stanford-red to-stanford-darkred rounded-xl flex items-center justify-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-stanford-red via-red-600 to-orange-500 rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-white font-bold text-xl">S</span>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">Stanford University</h3>
-                  <p className="text-gray-600">Class of 2025</p>
-                  <p className="text-sm text-gray-500">BS Electrical Engineering & Computer Science</p>
+                  <p className="text-stanford-red font-semibold">Class of 2025</p>
+                  <p className="text-sm text-gray-600">BS Electrical Engineering & Computer Science</p>
                 </div>
               </div>
             </motion.div>
@@ -113,10 +117,11 @@ const About = () => {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.2 * index + 0.3, duration: 0.6 }}
                 whileHover={{ 
-                  y: -5,
+                  y: -8,
+                  scale: 1.02,
                   transition: { duration: 0.3 }
                 }}
-                className="glass p-6 rounded-2xl border border-gray-200/50 hover:border-stanford-red/30 transition-all duration-300 group cursor-pointer"
+                className="glass p-6 rounded-2xl border border-gray-200/50 hover:border-stanford-red/30 transition-all duration-300 group cursor-pointer shadow-lg bg-white/60 backdrop-blur-sm hover:shadow-2xl"
               >
                 <div className="text-stanford-red mb-4 group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
