@@ -19,7 +19,11 @@ const Hero = () => {
     <section
       id="hero"
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        background:
+          'radial-gradient(120% 80% at 50% 0%, #111827 0%, #0b0b0f 40%, #000000 100%)',
+      }}
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
