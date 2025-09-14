@@ -72,12 +72,6 @@ const Contact = () => {
       color: "hover:text-blue-600"
     },
     {
-      icon: <Twitter className="w-6 h-6" />,
-      label: "Twitter",
-      href: "https://twitter.com/ethanharianto",
-      color: "hover:text-blue-400"
-    },
-    {
       icon: <Globe className="w-6 h-6" />,
       label: "Website",
       href: "https://ethanharianto.github.io/",

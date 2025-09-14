@@ -110,7 +110,7 @@ const Experience = () => {
 
                 {/* Content Card */}
                 <div className={`ml-16 md:ml-0 ${
-                  index % 2 === 0 ? 'md:mr-8 md:text-right' : 'md:ml-8 md:text-left'
+                  index % 2 === 0 ? 'md:mr-8 md:text-left' : 'md:ml-8 md:text-left'
                 } md:w-1/2`}>
                   <motion.div
                     whileHover={{ y: -5 }}

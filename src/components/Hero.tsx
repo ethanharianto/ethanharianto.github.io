@@ -15,6 +15,13 @@ const Hero = () => {
     }
   }
 
+  const scrollToContact = () => {
+    const element = document.querySelector('#contact')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section
       id="hero"
@@ -104,7 +111,7 @@ const Hero = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-lg lg:text-xl text-gray-300 font-medium tracking-wide uppercase"
           >
-            Hello, I'm
+            Hey, I'm
           </motion.p>
 
           {/* Name with text reveal animation */}
@@ -178,7 +185,7 @@ const Hero = () => {
                 borderColor: "rgba(255, 255, 255, 0.3)"
               }}
               whileTap={{ scale: 0.95 }}
-              onClick={scrollToAbout}
+              onClick={scrollToContact}
               className="px-8 py-4 rounded-full border-2 border-white/20 text-white font-semibold text-lg flex items-center gap-2 transition-all duration-300 backdrop-blur-sm bg-white/5"
             >
               <Mail className="w-5 h-5" />
