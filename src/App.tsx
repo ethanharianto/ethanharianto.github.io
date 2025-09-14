@@ -18,7 +18,7 @@ function App() {
       duration: 1.2,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      smoothTouch: false,
+      // smoothTouch removed in current typings
       touchMultiplier: 2,
       wheelMultiplier: 1,
       infinite: false,
