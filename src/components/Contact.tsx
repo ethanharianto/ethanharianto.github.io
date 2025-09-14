@@ -86,7 +86,7 @@ const Contact = () => {
     {
       icon: <FileDown className="w-6 h-6" />,
       label: "Resume",
-      href: "/my-website/Ethan_Harianto_Resume.pdf",
+      href: "/Ethan_Harianto_Resume.pdf",
       color: "hover:text-gray-800"
     }
   ]

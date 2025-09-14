@@ -167,7 +167,7 @@ const Hero = () => {
               className="relative overflow-hidden px-8 py-4 rounded-full bg-gradient-to-r from-stanford-red to-red-600 text-white font-semibold text-lg flex items-center gap-2 shadow-xl border border-red-500/20"
             >
               <Download className="w-5 h-5" />
-              <a href="/my-website/Ethan_Harianto_Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
+              <a href="/Ethan_Harianto_Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
             </motion.button>
 
