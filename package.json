@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://ethanharianto.github.io/my-website",
+  "homepage": "https://ethanharianto.github.io/",
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "framer-motion": "^12.23.12",
