@@ -210,19 +210,6 @@ const Projects = () => {
                       <span className="text-sm font-medium">Code</span>
                     </motion.a>
                   )}
-                  {project.demo && (
-                    <motion.a
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-600 hover:text-stanford-red transition-colors duration-200"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      <span className="text-sm font-medium">Demo</span>
-                    </motion.a>
-                  )}
                 </div>
               </div>
             </motion.div>

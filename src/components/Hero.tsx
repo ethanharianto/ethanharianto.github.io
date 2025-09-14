@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ChevronDown, Download, Mail } from 'lucide-react'
+import { Download, Mail } from 'lucide-react'
 import { useInView } from 'react-intersection-observer'
 
 const Hero = () => {
