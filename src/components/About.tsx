@@ -4,14 +4,13 @@ const About = () => {
       <div className="max-w-3xl mx-auto px-4 space-y-3">
         <h2 className="text-xl font-semibold">About</h2>
         <p className="text-[15px]">
-          I'm Ethan — MS CS & BS EE at Stanford (’26). I like building things that work well:
-          from Go services and WebRTC backends to React/Next.js frontends, and Verilog/FPGA when it
-          makes sense to go to hardware.
+          I'm Ethan — Stanford MS CS & BS EE (’26). I build ML systems and infrastructure end‑to‑end:
+          data ingestion, training & evaluation harnesses, and model serving for realtime products.
         </p>
         <p className="text-[15px]">
-          Recent work includes a conversational assistant at Pantheon Lab, an accessibility‑first
-          iOS app at Stanford’s PinCS Lab, and Slide Social. Focus areas: performance, reliability,
-          and making interfaces feel effortless.
+          Recent work: realtime speech assistant pipeline (STT → LLM → TTS → Lip‑Sync) over WebRTC
+          with multi‑region deployment; self‑supervised CV for route grading; RL agent for Coup.
+          I care about clarity, performance, and reliability.
         </p>
       </div>
     </section>
