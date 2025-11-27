@@ -1,69 +1,52 @@
-# React + TypeScript + Vite
+# Ethan Harianto — Machine Learning Engineer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I build reliable ML systems end‑to‑end: data, training, evaluation, and production serving. I care about correctness, latency, and shipping useful models and features.
 
-Currently, two official plugins are available:
+- Live site: https://ethanharianto.github.io/
+- Resume (PDF): /Ethan_Harianto_Resume.pdf
+- Email: eharianto@stanford.edu
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What I do
+- Design and ship ML features from scratch: problem framing → data → training → eval → serving → monitoring
+- Domains: speech (STT/TTS), computer vision, reinforcement learning
+- Systems: GPU‑aware inference, WebRTC/real‑time UX, cost/perf trade‑offs, reliability
 
-## Expanding the ESLint configuration
+## Selected ML projects
+- Speech assistant pipeline (STT → LLM → TTS → Lip‑Sync) over WebRTC, multi‑region deployment; built core pipeline and backend (Go, WebRTC, STT/TTS, VAD)
+- Rock Climbing Route Grader using self‑supervised learning + YOLOv5 (~80% agreement with experts) (PyTorch)
+- Reinforcement Learning agent for Coup with >90% win rate vs. random baseline (Q‑learning)
+- More projects: see “Projects” on the live site and my GitHub profile
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Stack
+- Languages: Python, Go, JavaScript/TypeScript, Swift
+- Modeling: PyTorch, scikit‑learn, YOLOv5; data tooling: NumPy, Pandas
+- Serving/Infra: Docker, REST/GraphQL, WebRTC; experiment tracking & evaluation workflows
+- Platforms/Tools: GitHub, macOS, Linux; some FPGA/Verilog for systems where hardware helps
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## This repo
+Minimal personal site (React + TypeScript + Vite) with a content‑first, dark monospace aesthetic that reflects systems/ML engineering. The site lists projects, experience, and links to code.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Quick start
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Build:
+```bash
+npm run build
+npm run preview
 ```
+
+### Deploy
+This site is configured for GitHub Pages. Build artifacts are in `dist/`. Use:
+```bash
+npm run deploy
+```
+
+## Contact
+- Email: eharianto@stanford.edu  
+- GitHub: https://github.com/ethanharianto  
+- LinkedIn: https://linkedin.com/in/ethan-harianto  
+
+Hiring? I’m always happy to talk about applied ML problems and shipping them to production.
