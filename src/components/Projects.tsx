@@ -8,7 +8,7 @@ const Projects = () => {
       title: "Slide Social (iOS App)",
       description: "iOS social platform built from scratch (80% of codebase). Designed custom image compression that cut costs by >90%. Launched to App Store.",
       tags: ["Swift", "iOS", "Algorithms"],
-      github: "",
+      github: ""
       // image: "/slide_social_preview.png"
     },
     {
@@ -16,7 +16,7 @@ const Projects = () => {
       title: "Rock Climbing Route Grader",
       description: "Computer vision-powered mobile utility with offline-first capabilities.",
       tags: ["Python", "PyTorch", "Computer Vision"],
-      github: "",
+      github: ""
       // image: "/route_grader_preview.png"
     },
     {
@@ -103,7 +103,7 @@ const Projects = () => {
               className="glass-dark rounded-xl overflow-hidden hover:bg-neutral-900/50 transition-colors group flex flex-col"
             >
               {/* Project Image */}
-              {project.image && (
+              {/* {project.image && (
                 <div className="h-48 overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent z-10 opacity-60" />
                   <img
@@ -112,7 +112,7 @@ const Projects = () => {
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-              )}
+              )} */}
 
               <div className="p-5 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-3">
