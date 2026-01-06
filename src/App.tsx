@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Navigation />
-      <main id="main">
+      <main id="main" tabIndex={-1} className="outline-none scroll-mt-28">
         <Hero />
         <About />
         <Experience />
