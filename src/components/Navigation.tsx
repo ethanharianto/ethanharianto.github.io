@@ -1,9 +1,18 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Search, Command } from 'lucide-react'
 
-const Navigation = () => {
+interface NavigationProps {
+  onOpenCmdk: () => void
+}
+
+const Navigation = ({ onOpenCmdk }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isMac, setIsMac] = useState(false)
+
+  useEffect(() => {
+    setIsMac(navigator.platform.toUpperCase().indexOf('MAC') >= 0)
+  }, [])
 
   const navItems = [
     { name: 'About', href: '#about' },
@@ -33,16 +42,35 @@ const Navigation = () => {
               {item.name}
             </a>
           ))}
+
+          <button
+            onClick={onOpenCmdk}
+            className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-neutral-800/50 hover:bg-neutral-800 text-neutral-400 hover:text-white transition-colors border border-white/5 ml-2 group"
+          >
+            <Search size={14} className="group-hover:text-blue-400 transition-colors" />
+            <span className="text-xs font-mono flex items-center gap-1">
+              {isMac ? <Command size={10} /> : <span className="text-[10px]">CTRL</span>} K
+            </span>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={toggleMenu}
-          className="md:hidden p-2 text-neutral-300 hover:text-white transition-colors"
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <button
+            onClick={onOpenCmdk}
+            className="text-neutral-300 hover:text-white"
+          >
+            <Search size={20} />
+          </button>
+
+          <button
+            onClick={toggleMenu}
+            className="p-2 text-neutral-300 hover:text-white transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation Dropdown */}
