@@ -3,12 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FolderGit2 } from 'lucide-react'
 
 import { projects } from '../data/projects'
-import type { ProjectCategory } from '../data/projects'
+import type { ProjectCategory, Project } from '../data/projects'
+import ProjectModal from './ProjectModal'
 
 const categories: (ProjectCategory | 'All')[] = ['All', 'Web', 'Mobile', 'AI/ML', 'Hardware']
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory | 'All'>('All')
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   const filteredProjects = projects.filter(project =>
     activeCategory === 'All' ? true : project.category === activeCategory
@@ -64,12 +66,14 @@ const Projects = () => {
             {filteredProjects.map((project) => (
               <motion.div
                 layout
+                layoutId={`project-${project.title}`}
                 key={project.title}
                 variants={item}
                 initial="hidden"
                 animate="show"
                 exit={{ opacity: 0, scale: 0.9 }}
-                className="glass-dark rounded-xl overflow-hidden hover:bg-neutral-900/50 transition-colors group flex flex-col"
+                onClick={() => setSelectedProject(project)}
+                className="glass-dark rounded-xl overflow-hidden hover:bg-neutral-900/50 transition-colors group flex flex-col cursor-pointer"
               >
                 <div className="p-5 flex flex-col flex-grow">
                   <div className="flex justify-between items-start mb-3">
@@ -81,6 +85,7 @@ const Projects = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         className="text-neutral-500 hover:text-white transition-colors"
                       >
                         <FolderGit2 size={18} />
@@ -109,6 +114,15 @@ const Projects = () => {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        <AnimatePresence>
+          {selectedProject && (
+            <ProjectModal
+              project={selectedProject}
+              onClose={() => setSelectedProject(null)}
+            />
+          )}
+        </AnimatePresence>
       </div >
     </section >
   )
