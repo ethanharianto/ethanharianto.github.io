@@ -18,19 +18,19 @@ export const projects: Project[] = [
     {
         title: "NYC Recommendations",
         description: "React app for NYC recommendations.",
-        longDescription: "A curated guide to the best spots in NYC, built with a focus on performance and local-first data. Users can filter by category, view on a map, and share their favorites.",
+        longDescription: "A curated guide to the best spots in NYC, built with a focus on performance and local-first data. Users can filter by category and view on a map.",
         tags: ["React", "Node.js", "Supabase"],
         github: "",
         category: "Web",
         images: [],
-        challenges: [
-            "Optimizing map rendering for hundreds of markers without lag.",
-            "Designing a mobile-friendly interface for on-the-go usage."
-        ],
-        outcomes: [
-            "Reduced initial load time by 40% using static generation.",
-            "Positively received by beta testers for its simplicity."
-        ]
+        // challenges: [
+        //     "Optimizing map rendering for hundreds of markers without lag.",
+        //     "Designing a mobile-friendly interface for on-the-go usage."
+        // ],
+        // outcomes: [
+        //     "Reduced initial load time by 40% using static generation.",
+        //     "Positively received by beta testers for its simplicity."
+        // ]
     },
     {
         title: "PintOS",
@@ -39,14 +39,14 @@ export const projects: Project[] = [
         tags: ["C", "Operating System", "x86 Assembly"],
         github: "",
         category: "Hardware",
-        challenges: [
-            "Debugging race conditions in the thread scheduler.",
-            "Implementing a robust virtual memory system with swap space."
-        ],
-        outcomes: [
-            "Successfully passed all rigorous test suites.",
-            "Gained deep appreciation for the complexity of modern OS kernels."
-        ]
+        // challenges: [
+        //     "Debugging race conditions in the thread scheduler.",
+        //     "Implementing a robust virtual memory system with swap space."
+        // ],
+        // outcomes: [
+        //     "Successfully passed all rigorous test suites.",
+        //     "Gained deep appreciation for the complexity of modern OS kernels."
+        // ]
     },
     {
         title: "LyricNet",
@@ -55,10 +55,10 @@ export const projects: Project[] = [
         tags: ["Python", "PyTorch", "BERT", "NLP"],
         github: "",
         category: "AI/ML",
-        challenges: [
-            " aligning multimodal data sources (text and audio) for training.",
-            "Fine-tuning BERT on a domain-specific dataset."
-        ]
+        // challenges: [
+        //     " aligning multimodal data sources (text and audio) for training.",
+        //     "Fine-tuning BERT on a domain-specific dataset."
+        // ]
     },
     {
         title: "Coup Reinforcement Learning Agent",
@@ -67,14 +67,14 @@ export const projects: Project[] = [
         tags: ["Python", "Reinforcement Learning"],
         github: "",
         category: "AI/ML",
-        challenges: [
-            "Modeling the imperfect information state space of the game.",
-            "Balancing exploration vs exploitation in a game with high variance."
-        ],
-        outcomes: [
-            "Achieved >90% win rate against a random baseline.",
-            "Demonstrated emergent bluffing behavior."
-        ]
+        // challenges: [
+        //     "Modeling the imperfect information state space of the game.",
+        //     "Balancing exploration vs exploitation in a game with high variance."
+        // ],
+        // outcomes: [
+        //     "Achieved >90% win rate against a random baseline.",
+        //     "Demonstrated emergent bluffing behavior."
+        // ]
     },
     {
         title: "Digital Audio Player (FPGA)",
@@ -105,7 +105,7 @@ export const projects: Project[] = [
         ],
         outcomes: [
             "Launched to the App Store with 100+ active users.",
-            "Reduced AWS S3 costs by 90% via compression optimization."
+            "Reduced Firebase costs by 90% via compression optimization."
         ]
     },
     {
@@ -141,35 +141,11 @@ export const projects: Project[] = [
         category: "Mobile"
     },
     {
-        title: "Slyther (Python Snake Game)",
-        description: "A tight Python implementation of Snake with smooth input and grid logic.",
-        longDescription: "A classic Snake game clone built with PyGame, featuring a high-score system and increasing difficulty.",
-        tags: ["Python", "PyGame"],
-        github: "https://github.com/ethanharianto/Slyther",
-        category: "Web"
-    },
-    {
         title: "freeCodeCamp Projects",
         description: "A collection of curriculum projects—HTML/CSS/JS fundamentals and beyond.",
         longDescription: "Various web development projects demonstrating proficiency in core web technologies.",
         tags: ["HTML", "CSS", "JavaScript"],
         github: "https://github.com/ethanharianto/freeCodeCamp-Projects",
         category: "Web"
-    },
-    {
-        title: "Layered Landscapes",
-        description: "A playful HTML/CSS visual—layers, parallax, and subtle motion.",
-        longDescription: "An artistic web experiment exploring parallax scrolling effects and CSS animations to create a depth-filled landscape.",
-        tags: ["CSS", "Parallax", "Design"],
-        github: "https://github.com/ethanharianto/Layered-Landscapes",
-        category: "Web"
-    },
-    {
-        title: "Task Manager (Expo/React Native)",
-        description: "A fast, offline‑friendly task manager built with Expo and TypeScript.",
-        longDescription: "A productivity app for managing daily tasks. Features offline support, categories, and reminders.",
-        tags: ["TypeScript", "React Native", "Expo"],
-        github: "https://github.com/ethanharianto/task-manager-expo",
-        category: "Mobile"
     },
 ]
