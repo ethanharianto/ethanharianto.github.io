@@ -16,6 +16,21 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        title: "Aboard the Icarus",
+        description: "LLM-powered web app for text adventure-style games.",
+        longDescription: "A web app that uses LLMs to generate text adventure-style games. Users can dictate the story with their responses and the LLM will generate the next scene based on the user's stats and current status.",
+        tags: ["React", "Node.js", "Gemini", "Gemma"],
+        github: "https://github.com/ethanharianto/aboard-the-icarus",
+        category: "Web",
+        images: [],
+        challenges: [
+            "Implementing a LLM pipeline when the LLM tokens are exhausted."
+        ],
+        // outcomes: [
+        //     "Successfully implemented a LLM pipeline when the LLM tokens are exhausted."
+        // ]
+    },
+    {
         title: "NYC Recommendations",
         description: "React app for NYC recommendations.",
         longDescription: "A curated guide to the best spots in NYC, built with a focus on performance and local-first data. Users can filter by category and view on a map.",
@@ -53,7 +68,7 @@ export const projects: Project[] = [
         description: "Multimodal Fusion model for lyrical emotion prediction.",
         longDescription: "A research project exploring the intersection of natural language processing and music information retrieval. The model predicts the emotional valence and arousal of a song based on its lyrics and audio features.",
         tags: ["Python", "PyTorch", "BERT", "NLP"],
-        github: "",
+        github: "https://github.com/ethanharianto/LyricNet-CS230",
         category: "AI/ML",
         // challenges: [
         //     " aligning multimodal data sources (text and audio) for training.",
@@ -65,7 +80,7 @@ export const projects: Project[] = [
         description: "RL agent that learns to bluff and win at the card game Coup.",
         longDescription: "An implementation of a Q-learning agent capable of playing the social deduction game Coup. The agent learns optimal strategies for bluffing and calling bluffs through self-play.",
         tags: ["Python", "Reinforcement Learning"],
-        github: "",
+        github: "https://github.com/davidmaemoto/CoupBot",
         category: "AI/ML",
         // challenges: [
         //     "Modeling the imperfect information state space of the game.",
@@ -89,7 +104,7 @@ export const projects: Project[] = [
         description: "Computer vision-powered mobile utility with offline-first capabilities.",
         longDescription: "A mobile application that uses computer vision to analyze climbing holds and suggest a difficulty grade. Built for climbers who want to grade their home wall problems.",
         tags: ["Python", "PyTorch", "Computer Vision"],
-        github: "",
+        github: "https://cs231n.stanford.edu/2024/papers/related-task-self-supervised-learning-for-rock-climbing-route-ra.pdf",
         category: "AI/ML"
     },
     {
