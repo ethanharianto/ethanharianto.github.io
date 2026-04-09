@@ -16,19 +16,45 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        title: "Veridian",
+        description: "Math mistake analysis platform for teachers and students—classrooms, assignments, corpus, and AI-powered feedback.",
+        longDescription: "Full-stack platform where teachers create classrooms and assignments (including PDF→LaTeX conversion and problem detection), manage a corpus, and students work through problems on a canvas with LLM-powered mistake analysis, red-dot annotations, and Socratic chat. Shared Supabase backend; Veridian design system (forest theme, design tokens) on teacher and student UIs.",
+        tags: ["React", "TypeScript", "Flask", "Python", "Supabase", "Expo", "Socket.IO"],
+        github: "", // add if public
+        demoUrl: "", // add if you have one
+        category: "Web",
+        images: [],
+        challenges: [
+            "Orchestrating PDF→LaTeX conversion with parallel workers and AI problem detection.",
+            "Mistake analysis pipeline: OCR, LLM analysis, verification, reconciliation, and coordinate detection for overlay.",
+            "Unifying design tokens and UI primitives across teacher (React) and student (Expo) apps."
+        ],
+        outcomes: [
+            "Teachers can create assignments from PDFs in seconds with auto-detected problems.",
+            "Students get annotated mistake feedback and Socratic tutoring in one flow.",
+            "Single design system (Veridian) and shared Supabase across teacher and student apps."
+        ]
+    },
+    {
+        title: "RL-Based Prompt Compression",
+        description: "Research paper on reward design for RL-based token-level prompt compression. Outperforms LLMLingua-2 on SQuAD 2.0.",
+        longDescription: "Studied reward design for RL-based prompt compression using a frozen DistilRoBERTa encoder with a trainable head that emits binary keep/drop decisions. Identified and addressed two reward pathologies: keep/drop asymmetry in per-token KL rewards and faithfulness mismatch from ground-truth comparison. A 2x2x2 factorial over algorithm (REINFORCE, MCTS), reward (harmonic, gated), and learning rate showed reward function choice had larger effect than algorithm on compression--faithfulness tradeoff. Best config achieves 74% compression while preserving 90-95% of task F1. Teacher-forced cross-entropy dense reward provides 2x sample efficiency.",
+        tags: ["Python", "PyTorch", "Reinforcement Learning", "LLM", "NLP"],
+        github: "https://github.com/ethanfarah/cs234-submission",
+        category: "AI/ML",
+        outcomes: [
+            "Outperforms LLMLingua-2 on SQuAD 2.0 (note: different evaluation protocols)",
+            "Best config: 74% compression, 90-95% task F1 preserved",
+            "MCTS+CE at 2000 episodes surpasses 4000-episode harmonic baseline on all metrics (2x sample efficiency)"
+        ]
+    },
+    {
         title: "Aboard the Icarus",
         description: "LLM-powered web app for text adventure-style games.",
         longDescription: "A web app that uses LLMs to generate text adventure-style games. Users can dictate the story with their responses and the LLM will generate the next scene based on the user's stats and current status.",
         tags: ["React", "Node.js", "Gemini", "Gemma"],
         github: "https://github.com/ethanharianto/aboard-the-icarus",
-        category: "Web",
-        images: [],
-        challenges: [
-            "Implementing a LLM pipeline when the LLM tokens are exhausted."
-        ],
-        // outcomes: [
-        //     "Successfully implemented a LLM pipeline when the LLM tokens are exhausted."
-        // ]
+        category: "Web"
     },
     {
         title: "NYC Recommendations",
