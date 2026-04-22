@@ -1,58 +1,33 @@
 ---
 title: "The latency budget of a talking avatar"
-description: "Notes on shipping a STT → LLM → TTS → Lip-Sync pipeline on WebRTC, and why every layer has to stream if you want the end-to-end feel to hold."
+description: "Working draft — replace before publishing."
 date: "2025-08-18"
 tags: ["WebRTC", "Realtime", "Systems"]
+draft: true
 ---
 
-Here's a frame I found useful while shipping Pantheon's realtime
-conversational stack: every stage in the pipeline is either streaming, or
-it's the bottleneck.
+Working draft — replace this.
 
-The pipeline, for the uninitiated:
+{/*
+Ready-to-uncomment building blocks:
 
-1. **STT** on the user's mic, producing partial transcripts.
-2. **LLM** responding token-by-token.
-3. **TTS** synthesizing audio in chunks.
-4. **Lip-sync** animating the avatar from TTS audio.
+<Kicker>Section kicker</Kicker>
 
-Each of these can run in two modes: *wait-and-go* (full output → next stage)
-or *streaming* (partial output → next stage, incrementally). The user-visible
-latency is dominated by whichever stage runs in wait-and-go mode.
+<Pullquote cite="Source">
+  A quote that earns its size.
+</Pullquote>
 
-## The anti-pattern
+<Metric
+  label="Metric label"
+  value="42%"
+  caption="What the number means, and what it does not."
+/>
 
-A common and costly mistake: treat "first-token latency" of the LLM as the
-thing to optimize. It matters, but you haven't actually shipped realtime
-until the TTS is also streaming, and the lip-sync is running on partial TTS
-audio.
-
-If *any* downstream stage buffers, the LLM's first-token win is invisible to
-the user. They hear silence until full synthesis completes.
-
-## The budget
-
-A rough budget I kept while tuning the pipeline:
-
-- Network RTT (user → nearest region): 40–80 ms.
-- STT partial latency: 80–150 ms.
-- LLM first token: 200–400 ms.
-- TTS first audio chunk: 120–200 ms.
-- Lip-sync buffer: ≤ 100 ms.
-
-If all of these overlap (the point of streaming), you can hit ~500 ms from
-end-of-user-utterance to first audible syllable. If any single stage is
-wait-and-go, you balloon past 1.5 s. Users feel that gap; they stop believing
-the avatar is listening.
-
-## The multi-region bit
-
-Most of the latency argument here doesn't care about regions — except STT,
-which has to be close to the user's microphone to avoid upload RTT dominating
-the early stages. The LLM and TTS can be in a denser model region further
-away, and it mostly doesn't matter, because they're streaming anyway.
-
-This is the single most counterintuitive piece for people coming from
-request/response web apps: colocating your LLM and your user is only worth
-the trouble for the first stage of the pipeline. After that, the whole point
-of streaming is to hide the distance.
+<Gallery
+  columns={2}
+  images={[
+    { src: "/images/example-a.png", alt: "Alt text", caption: "Caption A" },
+    { src: "/images/example-b.png", alt: "Alt text", caption: "Caption B" },
+  ]}
+/>
+*/}

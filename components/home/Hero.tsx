@@ -16,22 +16,28 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="mono-label mb-8 flex items-center gap-3"
+          className="mb-8 flex flex-wrap items-center gap-3"
         >
-          <span className="inline-block w-2 h-2 rounded-full bg-[var(--color-accent)] animate-pulse" />
-          Available — summer & full-time 2026
+          <span className="mono-label flex items-center gap-3">
+            <span className="inline-block w-2 h-2 rounded-full bg-[var(--color-accent)] animate-pulse" />
+            Available — full-time founding-engineer roles, 2026
+          </span>
+          <span className="chip">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]" />
+            Pear Prime &apos;26
+          </span>
         </motion.div>
 
         <h1 className="display text-[clamp(56px,11vw,172px)] text-[var(--color-ink)] max-w-[14ch]">
-          <AnimatedWord text="Reliable" delay={0.05} />{" "}
-          <AnimatedWord text="ML" delay={0.15} />
+          <AnimatedWord text="Founding" delay={0.05} />{" "}
+          <AnimatedWord text="engineer," delay={0.15} />
           <br />
-          <AnimatedWord text="systems," delay={0.25} />{" "}
+          <AnimatedWord text="shipping" delay={0.25} />{" "}
+          <AnimatedWord text="the" delay={0.32} />{" "}
           <span className="italic text-[var(--color-accent)]">
-            <AnimatedWord text="end" delay={0.35} />
-            <AnimatedWord text="-to-" delay={0.42} />
-            <AnimatedWord text="end" delay={0.5} />
-          </span>
+            <AnimatedWord text="whole" delay={0.4} />
+          </span>{" "}
+          <AnimatedWord text="product." delay={0.5} />
           <span className="caret" aria-hidden />
         </h1>
 
@@ -42,12 +48,11 @@ export function Hero() {
           className="mt-12 grid gap-10 md:grid-cols-12"
         >
           <p className="md:col-span-6 md:col-start-7 text-[17px] md:text-[19px] leading-relaxed text-[var(--color-ink)] max-w-[48ch]">
-            I'm <strong className="font-medium">Ethan Harianto</strong>, a
-            software engineer at Stanford (MS CS &amp; BS CS&nbsp;&apos;26)
-            building the full ML pipeline — data, training, evaluation, and
-            production serving. Recent work: WebRTC conversational agents, RL
-            research on prompt compression, and tools for teachers and
-            students.
+            I&apos;m <strong className="font-medium">Ethan Harianto</strong>, a
+            founding-engineer-in-waiting at Stanford (MS CS &amp; BS CS
+            &apos;26). I build zero-to-one products end-to-end — product,
+            systems, and the first ten customers — with a deep bench in ML
+            when a wedge calls for it. Recently: Pear Prime &apos;26.
           </p>
         </motion.div>
 
@@ -94,12 +99,12 @@ export function Hero() {
 
       <Marquee
         items={[
-          "Software Engineer",
-          "ML Systems",
-          "Stanford MS CS ’26",
-          "WebRTC + LLM pipelines",
-          "Research → Production",
-          "Swift · Go · TypeScript · Python",
+          "Founding engineer",
+          "0 to 1",
+          "Pear Prime ’26",
+          "Product + systems + GTM",
+          "Stanford CS ’26",
+          "Shipping on Vercel",
         ]}
       />
     </section>

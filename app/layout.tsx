@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   description: site.description,
   keywords: [
     "Ethan Harianto",
-    "Software Engineer",
-    "ML Systems",
+    "Founding Engineer",
+    "Pear Prime",
     "Stanford",
     "Portfolio",
   ],
@@ -56,7 +56,7 @@ const personJsonLd = {
     "@type": "CollegeOrUniversity",
     name: "Stanford University",
   },
-  jobTitle: "Software Engineer",
+  jobTitle: "Founding Engineer",
   address: {
     "@type": "PostalAddress",
     addressLocality: "San Francisco Bay Area",

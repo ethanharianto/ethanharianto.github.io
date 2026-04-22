@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { projects } from "@/lib/projects";
-import { getCaseStudies } from "@/lib/content";
+import { getPublishedCaseStudies } from "@/lib/content";
 import { WorkArchive } from "@/components/work/WorkArchive";
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function WorkIndexPage() {
-  const studies = getCaseStudies();
+  const studies = getPublishedCaseStudies();
   const caseStudySlugs = studies.map((s) => s.slug);
 
   return (

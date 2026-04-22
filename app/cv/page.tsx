@@ -75,9 +75,9 @@ export default function CvPage() {
             Ethan Harianto.
           </h1>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[var(--color-muted)]">
-            Software engineer working on reliable ML systems — data, training,
-            evaluation, and production serving. Stanford MS &amp; BS CS&nbsp;&apos;26.
-            Based in the San Francisco Bay Area.
+            Founding engineer building products end-to-end — product, systems,
+            and go-to-market. Pear Prime&nbsp;&apos;26. Stanford MS &amp; BS
+            CS&nbsp;&apos;26. Based in the San Francisco Bay Area.
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
@@ -114,6 +114,23 @@ export default function CvPage() {
               </p>
             </div>
           ))}
+        </div>
+      </Section>
+
+      <Section title="Programs & recognition">
+        <div className="divide-y divide-[var(--color-hairline)] border-y border-[var(--color-hairline)]">
+          <div className="grid md:grid-cols-12 gap-4 md:gap-8 py-6">
+            <div className="md:col-span-2 mono-label">2026</div>
+            <div className="md:col-span-6">
+              <p className="text-xl tracking-[-0.02em]">Pear Prime &apos;26</p>
+              <p className="text-[var(--color-muted)]">
+                Pear VC&apos;s selective student-founder program.
+              </p>
+            </div>
+            <p className="md:col-span-4 text-[14px] text-[var(--color-muted)] md:text-right">
+              Working on zero-to-one product alongside other student founders.
+            </p>
+          </div>
         </div>
       </Section>
 

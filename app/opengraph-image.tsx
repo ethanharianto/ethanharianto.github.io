@@ -79,9 +79,9 @@ export default async function OGImage() {
               maxWidth: "1000px",
             }}
           >
-            <span>Reliable ML systems,</span>
+            <span>Founding engineer,</span>
             <span style={{ color: "#3d5bff", fontStyle: "italic" }}>
-              end-to-end.
+              shipping the whole product.
             </span>
           </div>
           <div
@@ -89,11 +89,11 @@ export default async function OGImage() {
               display: "flex",
               fontSize: "24px",
               color: "#a0a0a6",
-              maxWidth: "800px",
+              maxWidth: "900px",
               lineHeight: 1.4,
             }}
           >
-            Ethan Harianto — Software engineer, Stanford MS &amp; BS CS &apos;26.
+            Ethan Harianto — Pear Prime &apos;26 · Stanford MS &amp; BS CS &apos;26.
           </div>
         </div>
 

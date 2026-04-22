@@ -1,45 +1,33 @@
 ---
 title: "One design system, two apps"
-description: "Lessons from sharing a design language across a React web app and an Expo mobile app — and where I'd draw the line next time."
+description: "Working draft — replace before publishing."
 date: "2025-07-04"
 tags: ["Design systems", "Expo", "React"]
+draft: true
 ---
 
-Veridian ships two clients: a teacher-facing React web app and a
-student-facing Expo mobile app. Under the hood, they share a design system —
-forest palette, tokenized type, consistent motion language.
+Working draft — replace this.
 
-Here's what I'd tell myself before starting again.
+{/*
+Ready-to-uncomment building blocks:
 
-## Share tokens. Don't share components.
+<Kicker>Section kicker</Kicker>
 
-Tokens are cheap and high-leverage. A single JSON/TS file that exports
-colors, spacing, radii, motion easings, and type ramps — consumed by both
-Tailwind (web) and a StyleSheet-generator (RN) — paid for itself within the
-first week.
+<Pullquote cite="Source">
+  A quote that earns its size.
+</Pullquote>
 
-Components are the opposite. A `Button` that has to satisfy both web
-accessibility semantics and React Native's touch targets inevitably grows
-branches. Every branch is a tiny fork in your rendering pipeline.
+<Metric
+  label="Metric label"
+  value="42%"
+  caption="What the number means, and what it does not."
+/>
 
-## The clone, not the abstraction
-
-For the first few components, I optimized for shared code. I regretted it.
-The better move: implement the component twice, once per platform, and
-share *only* the tokens and the visual spec. The cost of duplication is
-small when the APIs are small. The cost of the wrong abstraction compounds.
-
-## Motion is where the design system fails first
-
-Web motion and mobile motion don't translate. A 300 ms cubic-bezier on web
-often reads as sluggish on mobile; a spring on mobile often reads as flighty
-on web. Bake motion into the component, not the design system, and accept
-that "consistent feel" across platforms means "consistent *intent*," not
-identical numbers.
-
-## The test
-
-The sanity check I landed on: a product person should be able to look at
-both clients side-by-side and describe the brand in one sentence, without
-mentioning the word "consistent." If they say "this feels like one team
-built it" — you're there. If they say "it's consistent" — you're not yet.
+<Gallery
+  columns={2}
+  images={[
+    { src: "/images/example-a.png", alt: "Alt text", caption: "Caption A" },
+    { src: "/images/example-b.png", alt: "Alt text", caption: "Caption B" },
+  ]}
+/>
+*/}

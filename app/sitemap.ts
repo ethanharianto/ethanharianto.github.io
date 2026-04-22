@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { site } from "@/lib/site";
-import { getCaseStudies, getWriting } from "@/lib/content";
+import { getPublishedCaseStudies, getWriting } from "@/lib/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "" ? 1 : 0.7,
   }));
 
-  const caseRoutes = getCaseStudies().map((s) => ({
+  const caseRoutes = getPublishedCaseStudies().map((s) => ({
     url: `${base}/work/${s.slug}`,
     lastModified: now,
     changeFrequency: "yearly" as const,

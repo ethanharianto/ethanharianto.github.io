@@ -46,9 +46,10 @@ export function ContactBlock() {
         </Reveal>
         <Reveal delay={0.15}>
           <p className="mt-8 max-w-xl text-[17px] md:text-[19px] leading-relaxed text-[var(--color-muted)]">
-            I'm looking for summer 2026 and full-time 2026 roles working on ML
-            systems, developer tools, or deeply-crafted products. Reach out if
-            you're working on something interesting.
+            I&apos;m looking for a full-time founding-engineer role at an
+            early-stage, ambitious team, starting 2026 — joining Pear
+            Prime &apos;26 this year. Reach out if you&apos;re building
+            something consequential.
           </p>
         </Reveal>
 

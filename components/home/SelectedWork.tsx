@@ -17,8 +17,8 @@ export function SelectedWork() {
         <SectionHeader
           index="01"
           label="Selected work"
-          title="A few things I've shipped recently."
-          description="A handful of case studies that span research, production ML systems, and full-stack builds."
+          title="Things I've shipped end-to-end."
+          description="A handful of builds that span product, systems, and the wedge between research and production."
           action={
             <Link
               href="/work"

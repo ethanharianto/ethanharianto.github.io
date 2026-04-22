@@ -5,12 +5,12 @@ import { ArrowLeft } from "lucide-react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypePrettyCode from "rehype-pretty-code";
 
-import { getWriting, getWritingBySlug } from "@/lib/content";
+import { getAllWriting, getWritingBySlug } from "@/lib/content";
 import { mdxComponents } from "@/components/mdx/MdxComponents";
 import { site } from "@/lib/site";
 
 export function generateStaticParams() {
-  return getWriting().map((p) => ({ slug: p.slug }));
+  return getAllWriting().map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({

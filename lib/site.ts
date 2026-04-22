@@ -1,9 +1,9 @@
 export const site = {
   name: "Ethan Harianto",
   shortName: "Ethan",
-  title: "Ethan Harianto — Software Engineer",
+  title: "Ethan Harianto — Founding Engineer",
   description:
-    "Software engineer working on reliable ML systems end-to-end — data, training, eval, and production serving. Stanford MS/BS CS '26.",
+    "Founding engineer building products end-to-end — product, systems, and go-to-market. Pear Prime '26. Stanford MS/BS CS '26.",
   url: "https://ethanharianto.com",
   email: "eharianto@stanford.edu",
   location: "San Francisco Bay Area",

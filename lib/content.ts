@@ -29,6 +29,7 @@ export interface CaseStudyFrontmatter {
   cover?: string;
   accent?: string;
   projectSlug?: string;
+  draft?: boolean;
 }
 
 export interface CaseStudyEntry {
@@ -56,7 +57,7 @@ function estimateReadingTime(content: string) {
   return Math.max(1, Math.round(words / 220));
 }
 
-export function getWriting(): WritingEntry[] {
+export function getAllWriting(): WritingEntry[] {
   return readDir("writing")
     .map(({ slug, data, content }) => ({
       slug,
@@ -64,12 +65,15 @@ export function getWriting(): WritingEntry[] {
       content,
       readingTime: estimateReadingTime(content),
     }))
-    .filter((e) => !e.frontmatter.draft)
     .sort((a, b) => (a.frontmatter.date < b.frontmatter.date ? 1 : -1));
 }
 
+export function getWriting(): WritingEntry[] {
+  return getAllWriting().filter((e) => !e.frontmatter.draft);
+}
+
 export function getWritingBySlug(slug: string): WritingEntry | undefined {
-  return getWriting().find((e) => e.slug === slug);
+  return getAllWriting().find((e) => e.slug === slug);
 }
 
 export function getCaseStudies(): CaseStudyEntry[] {
@@ -78,6 +82,10 @@ export function getCaseStudies(): CaseStudyEntry[] {
     frontmatter: data as CaseStudyFrontmatter,
     content,
   }));
+}
+
+export function getPublishedCaseStudies(): CaseStudyEntry[] {
+  return getCaseStudies().filter((s) => !s.frontmatter.draft);
 }
 
 export function getCaseStudyBySlug(slug: string): CaseStudyEntry | undefined {

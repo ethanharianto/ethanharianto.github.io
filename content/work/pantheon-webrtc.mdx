@@ -1,82 +1,22 @@
 ---
 title: "Pantheon Conversational Stack"
-description: "STT → LLM → TTS → Lip-Sync over WebRTC, multi-region. A secure Go backend with rate-limiting and quotas, plus a self-service developer portal that cut onboarding from hours to minutes."
+description: "Working draft — replace before publishing."
 role: "Junior Software Developer"
 year: "2025"
 stack: ["Go", "Next.js", "WebRTC", "LiveKit", "Postgres"]
-metrics:
-  - label: "Onboarding time"
-    value: "Hours → minutes"
-  - label: "Regions"
-    value: "Multi-region"
-  - label: "Pipeline hops"
-    value: "STT → LLM → TTS → Lip-Sync"
+metrics: []
 projectSlug: "pantheon-webrtc"
+draft: true
 ---
 
-<Kicker>Context</Kicker>
+{/* DRAFT — replace prose below before setting draft: false */}
 
-## Conversational agents live or die on latency.
+## Context
 
-Pantheon Lab builds real-time conversational avatars. The interesting
-engineering isn't any single model — it's everything between a user's voice
-and the animated response, running in under a second, in whichever region
-the user happens to be.
+## Role
 
-I joined for the summer and worked on three connected pieces: the realtime
-pipeline, the Go backend that guards it, and the developer portal that lets
-customers actually *use* it.
+## What I built
 
-## Realtime pipeline
+## Results
 
-The pipeline is a sequence of streaming services connected over WebRTC:
-
-1. **STT** captures user audio as it arrives, streaming partial transcripts.
-2. **LLM** generates the response token-by-token.
-3. **TTS** converts those tokens to audio chunks as they become available.
-4. **Lip-sync** drives the avatar's facial animation from the TTS audio
-   stream.
-
-Each stage is a separate service; the pipeline is designed to tolerate a slow
-stage by continuing to stream partial results rather than waiting for full
-outputs. The deployment is multi-region so that edge hops don't dominate
-end-to-end latency for users outside the primary region.
-
-<Pullquote>
-  The user can hear a partial answer before the LLM has finished thinking. That
-  property is the whole product.
-</Pullquote>
-
-## Backend
-
-The backend is written in Go. The two things that mattered most:
-
-- **Rate limiting and quotas**. Every API key has per-minute and per-day
-  quotas. The limiter is a pluggable interface so we could swap the backing
-  store without touching the call sites.
-- **High availability**. Health checks, graceful shutdown, and panic recovery
-  at the handler boundary — the conversational pipeline is tolerant of a
-  single-service blip because every stage streams.
-
-## Developer portal
-
-API key registration used to involve an email thread, a human, and a wait.
-
-I shipped a self-service portal in Next.js where a developer signs in, creates
-a project, gets a scoped API key, and sees live usage against their quota.
-Onboarding dropped from hours to minutes — which sounds small, but every hour
-of friction at onboarding is a lost developer.
-
-<Metric
-  label="What I shipped"
-  value="Pipeline + backend + portal"
-  caption="The thing I'm most proud of isn't any single piece — it's that a developer can go from 'I heard about this' to 'I'm streaming real audio' without talking to anyone."
-/>
-
-## What I'd change with more time
-
-- Replace my ad-hoc quota store with a dedicated tokenized rate limiter.
-- Add SDKs in Python and TypeScript with streaming-first APIs so examples
-  don't have to teach WebRTC.
-- Build a load-shedding signal that propagates upstream instead of dropping at
-  the edge.
+## What I'd change
