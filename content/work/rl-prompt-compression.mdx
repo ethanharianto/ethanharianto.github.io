@@ -1,0 +1,90 @@
+---
+title: "RL-Based Prompt Compression"
+description: "A research paper on reward design for RL-based token-level prompt compression. Best config holds 90–95% task F1 at 74% compression — and matches a baseline with half the samples."
+role: "Researcher · CS 234"
+year: "2025"
+stack: ["Python", "PyTorch", "DistilRoBERTa", "REINFORCE", "MCTS"]
+metrics:
+  - label: "Compression"
+    value: "74%"
+  - label: "F1 preserved"
+    value: "90–95%"
+  - label: "Sample efficiency"
+    value: "2× vs. baseline"
+projectSlug: "rl-prompt-compression"
+---
+
+<Kicker>Motivation</Kicker>
+
+## Dropping tokens is cheap. Dropping the *right* tokens is not.
+
+Prompt compression — dropping tokens from a long prompt while preserving
+downstream task performance — is a direct lever on LLM cost and latency. The
+supervised state-of-the-art (LLMLingua-2) trains a classifier on token-level
+labels. We studied a different question: can reinforcement learning *discover*
+which tokens to drop, purely from task reward, without per-token supervision?
+
+## Setup
+
+A frozen DistilRoBERTa encoder produces token embeddings; a small trainable
+head emits binary keep/drop decisions. The compressed prompt is fed to a
+frozen LLM to produce an answer. Reward is computed from the LLM's
+downstream answer, not per-token labels.
+
+We studied two algorithm families and two reward schemes in a 2×2×2
+factorial (learning rate as the third axis):
+
+- **Algorithms**: REINFORCE and MCTS.
+- **Rewards**: harmonic (balancing compression and faithfulness) and a
+  teacher-forced cross-entropy signal used as a dense surrogate.
+
+## Two reward pathologies we hit — and fixed
+
+We found two concrete reward-design bugs that dominated the result.
+
+### 1. Keep/drop asymmetry in per-token KL
+
+A naive per-token KL reward punishes *dropping* tokens asymmetrically vs.
+*keeping* them. Early in training, the policy collapses to "keep everything"
+because the reward gradient favors it even when the answer doesn't change.
+
+We rewrote the reward to symmetrize the signal, which moved the policy off the
+all-keep fixed point in the first 200 episodes.
+
+### 2. Faithfulness mismatch vs. ground truth
+
+If we compare the compressed-prompt answer to ground-truth, short answers with
+high surface overlap look faithful even when the reasoning changed. Comparing
+to the *uncompressed* model's answer instead fixes this: the reward actually
+measures "did compression change the model's behavior?" rather than "did the
+model happen to be right?"
+
+<Pullquote>
+  The choice of reward function had a larger effect on the
+  compression–faithfulness tradeoff than the choice of algorithm.
+</Pullquote>
+
+## Results
+
+- **Best config**: 74% compression while preserving 90–95% of task F1 on
+  SQuAD 2.0.
+- **Algorithm vs. reward**: across the 2×2×2 factorial, reward choice moved
+  the Pareto frontier more than algorithm choice did.
+- **Sample efficiency**: MCTS with the cross-entropy dense reward at 2,000
+  episodes surpassed a 4,000-episode harmonic-reward baseline across every
+  metric — roughly 2× sample efficiency from reward design alone.
+
+<Metric
+  label="Net takeaway"
+  value="Reward > algorithm"
+  caption="In this setting, designing the right reward signal mattered more than the choice of RL algorithm. Supervised baselines beat us on raw F1 at low compression, but RL closed the gap once reward pathologies were fixed."
+/>
+
+## What I'd explore next
+
+- A learned faithfulness verifier (instead of reference-answer comparison) as
+  the reward.
+- Transfer to multi-turn dialogue where surface overlap is a weaker proxy for
+  faithfulness.
+- Curriculum over compression ratio — train with a moving compression target
+  instead of fixing it up front.

@@ -1,0 +1,94 @@
+---
+title: "Veridian"
+description: "A math-mistake analysis platform that turns student homework into structured, annotated feedback — for teachers and students, in the same design system."
+role: "Founding engineer"
+year: "2025"
+stack: ["React", "TypeScript", "Flask", "Python", "Supabase", "Expo", "Socket.IO"]
+metrics:
+  - label: "Assignment creation"
+    value: "Seconds"
+  - label: "Feedback surface"
+    value: "Overlay + Socratic chat"
+  - label: "Platforms"
+    value: "Web + iOS"
+projectSlug: "veridian"
+---
+
+<Kicker>Context</Kicker>
+
+## Teaching math at scale starts with the mistake.
+
+Grading math by hand scales poorly. Grading it with LLMs scales unreliably —
+models confidently say the right answer is wrong, and vice-versa. Veridian
+splits the problem into two halves: let teachers build a corpus of problems
+quickly, and let students receive feedback that tells them *where* they slipped,
+not just that they slipped.
+
+## Role
+
+I worked as a founding engineer across the teacher web app, student iOS app,
+and the Python services that connect them. My focus was the mistake-analysis
+pipeline and the design system that unifies the two surfaces.
+
+## Architecture
+
+The stack is split across three services:
+
+1. **Teacher web app** (React + TypeScript) for authoring classrooms,
+   assignments, and managing the corpus.
+2. **Student mobile app** (Expo + React Native) where students work problems on
+   a canvas and receive Socratic feedback.
+3. **Analysis service** (Flask + Python workers) that converts PDFs to LaTeX,
+   detects problems, runs OCR on student work, and coordinates the
+   mistake-analysis pipeline.
+
+Supabase provides shared auth, database, and realtime for both client apps —
+so teacher updates (new assignments, new feedback) stream to students through
+Socket.IO without extra plumbing.
+
+<Pullquote>
+  The pipeline is only useful if it admits "I don't know." Everything else is
+  premature certainty.
+</Pullquote>
+
+## The mistake-analysis pipeline
+
+The pipeline runs in five coordinated stages:
+
+- **Ingest**: convert PDFs to LaTeX with parallel workers, then call an LLM to
+  detect distinct problems and their bounding boxes.
+- **OCR**: run the student's on-canvas work through an OCR pass optimized for
+  handwritten math.
+- **Analysis**: ask an LLM to identify where the student's work diverges from a
+  correct solution, and return a structured list of mistakes with token-level
+  coordinates.
+- **Verification**: re-run a smaller verifier LLM that *only* sees the claimed
+  mistakes and either confirms or rejects each one. This halves the false
+  positive rate and avoids the "everything is a mistake" failure mode.
+- **Reconciliation**: map verified mistakes back onto student canvas
+  coordinates so the app can render red-dot annotations on the exact stroke
+  that went wrong.
+
+## Design system
+
+Teacher and student UIs live in the same design language, called *Veridian* —
+a forest palette with consistent tokens for type, motion, and hairline borders.
+A single `@veridian/ui` package ships primitives used by both React and React
+Native apps.
+
+<Kicker>Outcomes</Kicker>
+
+## What changed
+
+- Teachers go from PDF worksheet to fully-authored assignment in seconds,
+  without manually typing problems.
+- Students get mistake-level feedback with Socratic chat in one flow, instead
+  of leaving the app to check answers.
+- Engineering overhead is real but bounded: one Supabase backend, one design
+  system, two clients.
+
+## What I'd change
+
+- Move verification to a smaller fine-tuned model for lower cost and latency.
+- Add an explicit "ambiguous step" state so the UI admits uncertainty instead
+  of forcing a verdict.

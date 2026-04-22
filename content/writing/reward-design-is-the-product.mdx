@@ -1,0 +1,53 @@
+---
+title: "Reward design is the product"
+description: "A short note on why reward design moved a Pareto frontier more than the choice of RL algorithm did, and what that implies for production LLM pipelines."
+date: "2025-09-02"
+tags: ["RL", "LLM", "Research"]
+---
+
+I spent a quarter studying RL-based prompt compression and came out of it
+believing something I didn't before: in applied RL on LLMs, the reward
+function is the thing. Everything else is plumbing.
+
+The setup was simple enough. A frozen DistilRoBERTa encoder, a small trainable
+head, and a policy that emits per-token keep/drop decisions. Reward was
+derived from a downstream LLM's answer on the compressed prompt. Two
+algorithms, two reward schemes, three learning rates — a 2×2×2 factorial,
+because it was small and cheap.
+
+## The part I was wrong about
+
+Going in, I assumed the interesting axis was algorithm. REINFORCE vs. MCTS
+felt like where the engineering would sit.
+
+It wasn't. Two reward pathologies dominated the result:
+
+1. **Per-token KL rewards punish dropping tokens harder than keeping them.**
+   You can prove this on paper with a few lines of algebra. In practice, it
+   collapses the policy to "keep everything" in the first 200 episodes and
+   never recovers.
+2. **Comparing the compressed-prompt answer to ground-truth hides faithfulness
+   drift.** If the uncompressed model was wrong and the compressed model is
+   also wrong, you reward faithfulness. What you actually want is: "did the
+   behavior change under compression?" — which is a comparison against the
+   uncompressed model, not against truth.
+
+Both are obvious in retrospect. Neither was obvious at the start.
+
+## Why this generalizes
+
+Production LLM pipelines are, increasingly, RL problems in disguise. Anywhere
+there's a router, a fallback, a compressor, a retriever, or a tool picker,
+there's an implicit reward. Often it's "did the user accept the output?" —
+which is exactly the ground-truth-collapse case above, except now the
+ground-truth is a human who doesn't know what they don't know.
+
+If I only took one thing away: before you pick an algorithm, write down the
+reward and stare at it. Ask:
+
+- What fixed point does this reward incentivize?
+- What happens if the policy is lazy? Adversarial?
+- Does the reward change when I change *nothing* about the underlying answer
+  quality?
+
+In my case, answering the third question honestly would have saved weeks.
