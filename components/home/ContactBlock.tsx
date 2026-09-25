@@ -2,10 +2,13 @@ import { ArrowUpRight, Mail, Github, Linkedin, FileText } from "lucide-react";
 
 import { Reveal } from "@/components/ui/Reveal";
 import { Slot } from "@/components/ui/Slot";
-import { contact } from "@/lib/copy";
-import { site } from "@/lib/site";
+import { getContentOverrides } from "@/lib/content/resolve.server";
+import { buildResolvedContent } from "@/lib/content/shape";
 
-export function ContactBlock() {
+export async function ContactBlock() {
+  const overrides = await getContentOverrides();
+  const { contact, site } = buildResolvedContent(overrides);
+
   const channels = [
     {
       name: "Email",

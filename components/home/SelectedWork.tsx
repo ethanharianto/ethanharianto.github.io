@@ -5,10 +5,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
-import { featuredProjects } from "@/lib/projects";
-import { sections } from "@/lib/copy";
+import type { Project } from "@/lib/projects";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { CursorPreview } from "@/components/ui/CursorPreview";
+import { useSiteContent } from "@/components/providers/ContentProvider";
 
 interface SelectedWorkProps {
   /** Slugs that have a published case study, i.e. a real `/work/[slug]`
@@ -19,7 +19,8 @@ interface SelectedWorkProps {
 }
 
 export function SelectedWork({ caseStudySlugs = [] }: SelectedWorkProps) {
-  const items = featuredProjects();
+  const { projects, sections } = useSiteContent();
+  const items = projects.filter((p) => p.featured);
   const caseStudySet = new Set(caseStudySlugs);
   const [hoveredMark, setHoveredMark] = useState<string | null>(null);
 
@@ -60,7 +61,7 @@ export function SelectedWork({ caseStudySlugs = [] }: SelectedWorkProps) {
 }
 
 interface WorkRowProps {
-  project: ReturnType<typeof featuredProjects>[number];
+  project: Project;
   index: number;
   hasCaseStudy: boolean;
   onHover: (mark: string | null) => void;

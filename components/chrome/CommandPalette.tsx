@@ -16,8 +16,7 @@ import {
   Wrench,
 } from "lucide-react";
 
-import { site } from "@/lib/site";
-import { projects } from "@/lib/projects";
+import { useSiteContent } from "@/components/providers/ContentProvider";
 
 interface CommandPaletteProps {
   open: boolean;
@@ -26,6 +25,7 @@ interface CommandPaletteProps {
 
 export function CommandPalette({ open, setOpen }: CommandPaletteProps) {
   const router = useRouter();
+  const { site, projects } = useSiteContent();
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {

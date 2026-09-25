@@ -3,43 +3,55 @@ import { GeistMono } from "geist/font/mono";
 import { Newsreader } from "next/font/google";
 
 import { SiteShell } from "@/components/chrome/SiteShell";
+import { Footer } from "@/components/chrome/Footer";
+import { ContentProvider } from "@/components/providers/ContentProvider";
+import { getContentOverrides } from "@/lib/content/resolve.server";
+import { buildResolvedContent } from "@/lib/content/shape";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
-  title: {
-    default: site.title,
-    template: "%s — Ethan Harianto",
-  },
-  description: site.description,
-  keywords: [
-    "Ethan Harianto",
-    "Software Engineer",
-    "Systems Engineering",
-    "Machine Learning",
-    "Pear Prime",
-    "Stanford",
-  ],
-  authors: [{ name: "Ethan Harianto", url: site.url }],
-  creator: "Ethan Harianto",
-  openGraph: {
-    type: "website",
-    url: site.url,
-    title: site.title,
-    description: site.description,
-    siteName: site.name,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: site.title,
-    description: site.description,
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+// Metadata reads whatever's saved in the admin — same resolved content
+// as everything else — so an edited name/title/description shows up in
+// the tab title and social previews without a code change.
+export async function generateMetadata(): Promise<Metadata> {
+  const overrides = await getContentOverrides();
+  const { site: resolvedSite } = buildResolvedContent(overrides);
+
+  return {
+    metadataBase: new URL(resolvedSite.url),
+    title: {
+      default: resolvedSite.title,
+      template: `%s — ${resolvedSite.name}`,
+    },
+    description: resolvedSite.description,
+    keywords: [
+      "Ethan Harianto",
+      "Software Engineer",
+      "Systems Engineering",
+      "Machine Learning",
+      "Pear Prime",
+      "Stanford",
+    ],
+    authors: [{ name: resolvedSite.name, url: resolvedSite.url }],
+    creator: resolvedSite.name,
+    openGraph: {
+      type: "website",
+      url: resolvedSite.url,
+      title: resolvedSite.title,
+      description: resolvedSite.description,
+      siteName: resolvedSite.name,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: resolvedSite.title,
+      description: resolvedSite.description,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 
 export const viewport: Viewport = {
   themeColor: "#0b0d0f",
@@ -87,11 +99,14 @@ const newsreader = Newsreader({
   fallback: ["Georgia", "Times New Roman", "serif"],
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const overrides = await getContentOverrides();
+  const content = buildResolvedContent(overrides);
+
   return (
     <html
       lang="en"
@@ -110,7 +125,9 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <SiteShell>{children}</SiteShell>
+        <ContentProvider value={content}>
+          <SiteShell footer={<Footer />}>{children}</SiteShell>
+        </ContentProvider>
       </body>
     </html>
   );

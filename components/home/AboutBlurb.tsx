@@ -1,7 +1,8 @@
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { Slot } from "@/components/ui/Slot";
-import { about, aboutProse, layers } from "@/lib/copy";
+import { getContentOverrides } from "@/lib/content/resolve.server";
+import { buildResolvedContent } from "@/lib/content/shape";
 
 /**
  * The layers, with no paragraph beside them.
@@ -16,7 +17,9 @@ import { about, aboutProse, layers } from "@/lib/copy";
  * `aboutProse` in `@/lib/copy` can still fill the second column. Until
  * it's written, the stack goes full width and the section gets shorter.
  */
-export function AboutBlurb() {
+export async function AboutBlurb() {
+  const overrides = await getContentOverrides();
+  const { about, aboutProse, layers } = buildResolvedContent(overrides);
   const hasProse = aboutProse.some((p) => p.text);
 
   return (

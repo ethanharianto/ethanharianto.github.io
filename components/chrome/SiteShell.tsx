@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Nav } from "./Nav";
-import { Footer } from "./Footer";
 import { CommandPalette } from "./CommandPalette";
 import { LenisProvider } from "./LenisProvider";
 import { Grain } from "./Grain";
@@ -19,7 +18,18 @@ const HOME_SECTIONS = [
   { id: "contact", name: "Contact" },
 ];
 
-export function SiteShell({ children }: { children: React.ReactNode }) {
+export function SiteShell({
+  children,
+  footer,
+}: {
+  children: React.ReactNode;
+  // Footer is a Server Component (it reads resolved content directly).
+  // SiteShell is a Client Component, so Footer must be rendered by a
+  // Server Component ancestor (RootLayout) and passed down as a node —
+  // importing and rendering it here would pull its server-only code into
+  // the client bundle.
+  footer: React.ReactNode;
+}) {
   const [cmdkOpen, setCmdkOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
@@ -38,7 +48,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <main id="main" className="relative z-[2]">
         {children}
       </main>
-      <Footer />
+      {footer}
     </LenisProvider>
   );
 }

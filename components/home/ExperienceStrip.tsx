@@ -1,9 +1,12 @@
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Reveal } from "@/components/ui/Reveal";
-import { experience } from "@/lib/experience";
-import { sections } from "@/lib/copy";
+import { getContentOverrides } from "@/lib/content/resolve.server";
+import { buildResolvedContent } from "@/lib/content/shape";
 
-export function ExperienceStrip() {
+export async function ExperienceStrip() {
+  const overrides = await getContentOverrides();
+  const { experience, sections } = buildResolvedContent(overrides);
+
   return (
     <section id="experience" className="py-28 md:py-40 relative">
       <div className="shell">

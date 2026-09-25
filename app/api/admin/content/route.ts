@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
   }
 
   await put(CONTENT_BLOB_PATHNAME, JSON.stringify(sanitized), {
-    access: "public",
+    access: "private",
     contentType: "application/json",
     allowOverwrite: true,
     addRandomSuffix: false,

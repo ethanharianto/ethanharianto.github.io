@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-import { site } from "@/lib/site";
+import { getContentOverrides } from "@/lib/content/resolve.server";
+import { buildResolvedContent } from "@/lib/content/shape";
 import { Wordmark } from "@/components/brand/Wordmark";
 
-export function Footer() {
+export async function Footer() {
+  const overrides = await getContentOverrides();
+  const { site } = buildResolvedContent(overrides);
   const year = new Date().getFullYear();
   return (
     <footer className="relative mt-32 border-t border-[var(--color-hairline)] pt-20 pb-12">

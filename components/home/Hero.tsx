@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 
 import { Marquee } from "@/components/ui/Marquee";
 import { Slot } from "@/components/ui/Slot";
-import { hero } from "@/lib/copy";
-import { site } from "@/lib/site";
+import { useSiteContent } from "@/components/providers/ContentProvider";
 
 /**
  * The run's first screen.
@@ -27,6 +26,8 @@ import { site } from "@/lib/site";
  *     underneath it to back it up.
  */
 export function Hero() {
+  const { hero, site } = useSiteContent();
+
   return (
     <section className="relative min-h-[100svh] flex flex-col">
       <div className="shell relative flex-1 flex flex-col justify-center pt-28 pb-12">
