@@ -33,6 +33,19 @@ export function SiteShell({
   const [cmdkOpen, setCmdkOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
+  // The admin editor ships its own header, section nav and Save button.
+  // Site chrome is a fixed z-40 bar at the top of the viewport — the same
+  // band the admin header occupies — so stacking it here painted over the
+  // Save button and swallowed its clicks. Give admin the bare shell.
+  const isAdmin = pathname.startsWith("/admin");
+
+  if (isAdmin) {
+    return (
+      <main id="main" className="relative z-[2]">
+        {children}
+      </main>
+    );
+  }
 
   return (
     <LenisProvider>
