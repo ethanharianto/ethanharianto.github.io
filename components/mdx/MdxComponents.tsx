@@ -10,7 +10,7 @@ interface MetricProps {
 function Metric({ label, value, caption }: MetricProps) {
   return (
     <div className="not-prose rounded-2xl border border-[var(--color-hairline)] bg-[var(--color-surface)] p-6 my-8">
-      <p className="mono-label">{label}</p>
+      <p className="log">{label}</p>
       <p className="mt-3 display text-[clamp(28px,4vw,48px)] text-[var(--color-ink)]">
         {value}
       </p>
@@ -33,7 +33,7 @@ function Pullquote({ children, cite }: PullquoteProps) {
         {children}
       </blockquote>
       {cite ? (
-        <figcaption className="mt-4 mono-label">— {cite}</figcaption>
+        <figcaption className="mt-4 log">— {cite}</figcaption>
       ) : null}
     </figure>
   );
@@ -62,7 +62,7 @@ function Gallery({ images, columns = 2 }: GalleryProps) {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={img.src} alt={img.alt} className="w-full h-auto" />
           {img.caption ? (
-            <figcaption className="p-3 mono-label">{img.caption}</figcaption>
+            <figcaption className="p-3 log">{img.caption}</figcaption>
           ) : null}
         </figure>
       ))}
@@ -72,7 +72,7 @@ function Gallery({ images, columns = 2 }: GalleryProps) {
 
 function Kicker({ children }: { children: React.ReactNode }) {
   return (
-    <p className="not-prose mono-label my-8 flex items-center gap-3">
+    <p className="not-prose log my-8 flex items-center gap-3">
       <span className="h-px w-6 bg-[var(--color-accent)]" />
       {children}
     </p>

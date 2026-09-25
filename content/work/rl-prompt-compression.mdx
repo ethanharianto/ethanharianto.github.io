@@ -1,22 +1,84 @@
 ---
 title: "RL-Based Prompt Compression"
-description: "Working draft — replace before publishing."
+description: null
 role: "Researcher · CS 234"
 year: "2025"
 stack: ["Python", "PyTorch", "DistilRoBERTa", "REINFORCE", "MCTS"]
-metrics: []
+metrics:
+  - { label: "Compression", value: "74%" }
+  - { label: "Task F1 preserved", value: "90–95%" }
+  - { label: "Sample efficiency", value: "≈2×" }
 projectSlug: "rl-prompt-compression"
 draft: true
 ---
 
-{/* DRAFT — replace prose below before setting draft: false */}
+{/*
+  SCAFFOLD. The structure and every number below are yours — they come
+  from `lib/projects.ts` and this file's frontmatter. The argument is
+  not written, and shouldn't be written for you: a case study that
+  explains your own research back to you teaches a reader nothing.
+
+  Delete this comment, then fill each section. Delete any section you
+  don't need — including "Results", which is optional if the metrics
+  row above the fold already says it.
+
+  Blocks available: <Metric>, <Pullquote>, <Gallery>, <Kicker>.
+  See components/mdx/MdxComponents.tsx.
+
+  Reminder: `draft: true` above keeps this off the site. Set it to
+  false when the prose is yours.
+*/}
 
 ## Context
 
-## Role
+TODO. What problem prompt compression solves, and why the obvious
+approach — train a model to predict which tokens to drop — is the wrong
+shape of problem. One paragraph.
 
-## What I built
+## Setup
+
+TODO. A frozen DistilRoBERTa encoder over the prompt; a trainable head
+emitting a binary keep/drop decision per token; kept tokens go to the
+task model; the score comes back as a reward. Delete this section if
+your writeup leads with the findings instead.
+
+## The reward
+
+TODO. The per-token KL reward, and the two ways it's wrong:
+
+- **Keep/drop asymmetry.** The output space is asymmetric — dropping a
+  needed token destroys the answer, keeping an unneeded one costs a
+  little compute. A reward summed symmetrically doesn't see that.
+- **Faithfulness mismatch.** Scoring against the ground-truth answer
+  asks the compressed prompt to reproduce one known outcome, when it's
+  actually being asked to preserve what the model would have concluded.
+
+## Experiment
+
+TODO. The 2×2×2 factorial: algorithm (REINFORCE, MCTS) × reward
+(harmonic, gated) × learning rate. What you expected, and what happened
+instead.
+
+<!-- Pullquote candidate, if one line earns its size:
+<Pullquote cite="CS 234 submission">
+  Reward function choice had a larger effect than algorithm choice on the
+  compression–faithfulness tradeoff.
+</Pullquote>
+-->
 
 ## Results
 
+<!-- These four are yours; confirm the wording before publishing. -->
+
+- Outperforms LLMLingua-2 on SQuAD 2.0. Note the evaluation protocols
+  differ — say so here rather than letting a reader assume otherwise.
+- Best config: 74% compression, 90–95% task F1 preserved.
+- MCTS + cross-entropy at 2,000 episodes surpasses the 4,000-episode
+  harmonic baseline on all metrics (≈2× sample efficiency).
+- Reward function choice had a larger effect than algorithm choice on
+  the compression–faithfulness tradeoff.
+
 ## What I'd change
+
+TODO. The part a reader learns the most from. What was diagnosed and
+not fixed, or what the design got wrong.

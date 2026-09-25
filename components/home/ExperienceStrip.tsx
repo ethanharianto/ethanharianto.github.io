@@ -1,6 +1,7 @@
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { experience } from "@/lib/experience";
+import { sections } from "@/lib/copy";
 
 export function ExperienceStrip() {
   return (
@@ -8,8 +9,8 @@ export function ExperienceStrip() {
       <div className="shell">
         <SectionHeader
           index="03"
-          label="Experience"
-          title="Where I've been working."
+          label={sections.experience.label}
+          title={sections.experience.title}
         />
 
         <div className="divide-y divide-[var(--color-hairline)] border-y border-[var(--color-hairline)]">
@@ -20,7 +21,7 @@ export function ExperienceStrip() {
               className="grid md:grid-cols-12 gap-4 md:gap-8 py-8 md:py-10"
             >
               <div className="md:col-span-2">
-                <p className="mono-label">{e.period}</p>
+                <p className="log">{e.period}</p>
               </div>
               <div className="md:col-span-6">
                 <h3 className="text-2xl md:text-3xl tracking-[-0.02em]">

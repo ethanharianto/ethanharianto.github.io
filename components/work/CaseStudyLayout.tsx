@@ -24,11 +24,10 @@ export function CaseStudyLayout({
   return (
     <article>
       <header className="relative overflow-hidden pt-40 pb-20 border-b border-[var(--color-hairline)]">
-        <div className="aurora" aria-hidden style={{ opacity: 0.35 }} />
         <div className="shell relative z-[3]">
           <Link
             href="/work"
-            className="inline-flex items-center gap-2 link-underline mono-label"
+            className="inline-flex items-center gap-2 link-underline log"
           >
             <ArrowLeft size={12} />
             All work
@@ -57,7 +56,7 @@ export function CaseStudyLayout({
                   key={m.label}
                   className="rounded-2xl border border-[var(--color-hairline)] bg-[var(--color-surface)] p-6"
                 >
-                  <p className="mono-label">{m.label}</p>
+                  <p className="log">{m.label}</p>
                   <p className="mt-3 display text-[clamp(28px,4vw,52px)] text-[var(--color-ink)]">
                     {m.value}
                   </p>
@@ -68,11 +67,15 @@ export function CaseStudyLayout({
         </div>
       </header>
 
+      {/* The measure is flush with the title above it, not centred. A
+          centred 70ch column inside a 1280px shell leaves a wide empty
+          gutter on the left and breaks the alignment the rest of the
+          system — headers, meta, footer — is built on. */}
       <div className="shell py-20 md:py-28">
-        <div className="mx-auto prose-case">{children}</div>
+        <div className="prose-case">{children}</div>
 
         {project?.github || project?.demoUrl ? (
-          <div className="mt-16 flex flex-wrap gap-3 justify-center">
+          <div className="mt-16 flex flex-wrap gap-3">
             {project?.github ? (
               <a
                 href={project.github}
@@ -107,9 +110,9 @@ export function CaseStudyLayout({
                 href={`/work/${prev.slug}`}
                 className="group rounded-xl border border-[var(--color-hairline)] p-6 hover:border-[var(--color-hairline-strong)] transition-colors"
               >
-                <p className="mono-label">Previous</p>
+                <p className="log">← Previous</p>
                 <p className="mt-2 text-xl tracking-[-0.02em] group-hover:text-[var(--color-accent)] transition-colors">
-                  ← {prev.title}
+                  {prev.title}
                 </p>
               </Link>
             ) : (
@@ -120,9 +123,9 @@ export function CaseStudyLayout({
                 href={`/work/${next.slug}`}
                 className="group rounded-xl border border-[var(--color-hairline)] p-6 md:text-right hover:border-[var(--color-hairline-strong)] transition-colors"
               >
-                <p className="mono-label">Next</p>
+                <p className="log">Next →</p>
                 <p className="mt-2 text-xl tracking-[-0.02em] group-hover:text-[var(--color-accent)] transition-colors">
-                  {next.title} →
+                  {next.title}
                 </p>
               </Link>
             ) : null}
@@ -144,7 +147,7 @@ function Meta({
 }) {
   return (
     <div className={className}>
-      <dt className="mono-label">{label}</dt>
+      <dt className="log">{label}</dt>
       <dd className="mt-2 text-[15px] md:text-[17px] text-[var(--color-ink)]">
         {value}
       </dd>

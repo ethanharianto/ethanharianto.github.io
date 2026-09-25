@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { Newsreader } from "next/font/google";
 
 import { SiteShell } from "@/components/chrome/SiteShell";
 import { site } from "@/lib/site";
@@ -15,10 +15,11 @@ export const metadata: Metadata = {
   description: site.description,
   keywords: [
     "Ethan Harianto",
-    "Founding Engineer",
+    "Software Engineer",
+    "Systems Engineering",
+    "Machine Learning",
     "Pear Prime",
     "Stanford",
-    "Portfolio",
   ],
   authors: [{ name: "Ethan Harianto", url: site.url }],
   creator: "Ethan Harianto",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0b",
+  themeColor: "#0b0d0f",
   colorScheme: "dark",
 };
 
@@ -56,13 +57,35 @@ const personJsonLd = {
     "@type": "CollegeOrUniversity",
     name: "Stanford University",
   },
-  jobTitle: "Founding Engineer",
+  jobTitle: "Software Engineer",
   address: {
     "@type": "PostalAddress",
     addressLocality: "San Francisco Bay Area",
     addressCountry: "US",
   },
 };
+
+/**
+ * Newsreader carries display AND prose. Its optical-size axis means
+ * `font-optical-sizing: auto` gives a 156px headline crisp hairlines
+ * and a 19px paragraph the sturdier shapes it needs — one family
+ * doing two jobs, which is the whole point.
+ *
+ * Geist Sans is gone entirely. Two families is the budget: this
+ * argues, Geist Mono records.
+ */
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  display: "swap",
+  /* `variable`, not a list of weights. Discrete weights make next/font
+     fetch static instances, where the opsz axis does nothing — and the
+     optical sizing is the entire reason for picking this family. */
+  weight: "variable",
+  style: ["normal", "italic"],
+  variable: "--font-newsreader",
+  axes: ["opsz"],
+  fallback: ["Georgia", "Times New Roman", "serif"],
+});
 
 export default function RootLayout({
   children,
@@ -72,7 +95,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${GeistSans.variable} ${GeistMono.variable}`}
+      className={`${newsreader.variable} ${GeistMono.variable}`}
       suppressHydrationWarning
     >
       <body>

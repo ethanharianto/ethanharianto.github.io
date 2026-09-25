@@ -1,67 +1,83 @@
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Reveal } from "@/components/ui/Reveal";
+import { Slot } from "@/components/ui/Slot";
+import { about, aboutProse, layers } from "@/lib/copy";
 
+/**
+ * The layers, with no paragraph beside them.
+ *
+ * This section was two columns — a stack of claims on the left, prose
+ * asserting the same claims on the right. That's the portfolio habit:
+ * say it twice, once as a list and once as a paragraph. With the prose
+ * removed, the layer stack carries the section on its own, and it's the
+ * stronger layout — a cross-section of real work argues breadth better
+ * than a paragraph claiming it.
+ *
+ * `aboutProse` in `@/lib/copy` can still fill the second column. Until
+ * it's written, the stack goes full width and the section gets shorter.
+ */
 export function AboutBlurb() {
+  const hasProse = aboutProse.some((p) => p.text);
+
   return (
     <section id="about" className="py-28 md:py-40 relative">
       <div className="shell">
-        <SectionHeader
-          index="02"
-          label="About"
-          title="Building the whole product from day one."
-        />
+        <SectionHeader index="02" label={about.label} title={about.title} />
 
-        <div className="grid md:grid-cols-12 gap-8">
-          <div className="md:col-span-5">
-            <Reveal className="sticky top-32 space-y-4">
-              <p className="mono-label">How I work</p>
-              <ul className="space-y-3 text-[15px] text-[var(--color-muted)]">
-                <li className="flex gap-3">
-                  <span className="text-[var(--color-accent)]">→</span>
-                  Own the wedge — from first customer to shipped product.
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[var(--color-accent)]">→</span>
-                  Decide under ambiguity; revise when the data tells me to.
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[var(--color-accent)]">→</span>
-                  Design, engineering, and go-to-market as one feedback loop.
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[var(--color-accent)]">→</span>
-                  ML when it&apos;s the unlock, not when it&apos;s the pitch.
-                </li>
-              </ul>
+        <div
+          className={
+            hasProse
+              ? "grid md:grid-cols-12 gap-8 md:gap-12"
+              : "max-w-5xl"
+          }
+        >
+          <div className={hasProse ? "md:col-span-5" : ""}>
+            <Reveal className={hasProse ? "sticky top-32" : ""}>
+              <p className="log mb-5">The layers</p>
+              <dl className="border-t border-[var(--color-hairline)]">
+                {layers.map(({ layer, evidence }) => (
+                  <div
+                    key={layer}
+                    className="border-b border-[var(--color-hairline)] py-5"
+                  >
+                    <dt className="display text-[22px] md:text-[26px] text-[var(--color-ink)]">
+                      {layer}
+                    </dt>
+                    <dd className="mt-2">
+                      <Slot
+                        as="div"
+                        className="text-[15px] leading-relaxed text-[var(--color-muted)] max-w-[52ch]"
+                        slot={{
+                          text: evidence,
+                          hint: `One real project per layer. ${
+                            layer === "Systems"
+                              ? "The WebRTC pipeline, the Go gateway."
+                              : layer === "Interfaces"
+                                ? "React + Expo on one backend. The shipped iOS app."
+                                : layer === "Models"
+                                  ? "The reward-design paper."
+                                  : "PintOS, the FPGA player, the quadruped."
+                          }`,
+                        }}
+                      />
+                    </dd>
+                  </div>
+                ))}
+              </dl>
             </Reveal>
           </div>
 
-          <div className="md:col-span-7 space-y-8 text-[17px] md:text-[19px] leading-relaxed text-[var(--color-ink)] max-w-[56ch]">
-            <Reveal delay={0.05}>
-              <p>
-                I like being the person who takes a company from nothing to a
-                working product in the hands of real users — writing the code,
-                talking to the first ten customers, and owning the wedge from
-                strategy down to the last pixel.
-              </p>
-            </Reveal>
-            <Reveal delay={0.12}>
-              <p>
-                I&apos;m comfortable across the stack — interactive frontends,
-                distributed backends, and ML systems when the problem needs
-                one — and I move fastest when a small team is making
-                consequential decisions under ambiguity.
-              </p>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <p>
-                I&apos;m finishing an MS &amp; BS in CS at Stanford in 2026
-                and joining Pear Prime &apos;26. Looking for a full-time
-                founding-engineer role at an early-stage, ambitious team
-                starting 2026.
-              </p>
-            </Reveal>
-          </div>
+          {hasProse ? (
+            <div className="md:col-span-7 space-y-8 text-[17px] md:text-[19px] leading-relaxed text-[var(--color-ink)] max-w-[56ch]">
+              {aboutProse.map((p, i) =>
+                p.text ? (
+                  <Reveal key={i} delay={0.05 * (i + 1)}>
+                    <Slot slot={p} className="" />
+                  </Reveal>
+                ) : null,
+              )}
+            </div>
+          ) : null}
         </div>
       </div>
     </section>

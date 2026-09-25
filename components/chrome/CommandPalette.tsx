@@ -192,7 +192,7 @@ function Item({
   return (
     <Command.Item
       onSelect={onSelect}
-      className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[var(--color-ink)] hover:bg-[rgba(250,250,247,0.04)] cursor-pointer transition-colors aria-selected:bg-[rgba(250,250,247,0.06)]"
+      className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[var(--color-ink)] hover:bg-[rgba(250,243,221,0.04)] cursor-pointer transition-colors aria-selected:bg-[rgba(250,243,221,0.06)]"
     >
       <span className="text-[var(--color-muted)]">{icon}</span>
       <span>{label}</span>

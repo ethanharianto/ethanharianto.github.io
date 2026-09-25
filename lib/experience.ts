@@ -16,7 +16,7 @@ export const experience: ExperienceEntry[] = [
     location: "Hong Kong SAR",
     period: "Jun 2025 – Aug 2025",
     description:
-      "Shipped core pieces of a conversational assistant and developer platform.",
+      "Built the voice pipeline behind an API-first conversational assistant, and the portal other developers used to get a key.",
     achievements: [
       "Built STT→LLM→TTS→Lip-Sync pipeline on WebRTC; deployed across multiple regions.",
       "Implemented secure Go backend with rate-limiting and quotas; ensured high availability.",

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, type MouseEvent } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, FolderGit2 } from "lucide-react";
 
@@ -14,16 +13,6 @@ interface WorkCardProps {
 }
 
 export function WorkCard({ project, index, hasCaseStudy }: WorkCardProps) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const onMove = (e: MouseEvent<HTMLDivElement>) => {
-    const el = ref.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    el.style.setProperty("--mx", `${e.clientX - rect.left}px`);
-    el.style.setProperty("--my", `${e.clientY - rect.top}px`);
-  };
-
   const Wrapper = ({ children }: { children: React.ReactNode }) =>
     hasCaseStudy ? (
       <Link href={`/work/${project.slug}`} className="absolute inset-0 z-[1]">
@@ -34,8 +23,6 @@ export function WorkCard({ project, index, hasCaseStudy }: WorkCardProps) {
 
   return (
     <motion.div
-      ref={ref}
-      onMouseMove={onMove}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -43,32 +30,20 @@ export function WorkCard({ project, index, hasCaseStudy }: WorkCardProps) {
         delay: index * 0.04,
         ease: [0.16, 1, 0.3, 1],
       }}
-      className="group relative isolate overflow-hidden rounded-2xl border border-[var(--color-hairline)] bg-[var(--color-surface)] p-6 md:p-8 hover:border-[var(--color-hairline-strong)] transition-colors"
+      className="group relative isolate rounded-xl border border-[var(--color-hairline)] p-6 md:p-8 transition-colors hover:border-[var(--color-hairline-strong)]"
     >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        style={{
-          background:
-            "radial-gradient(340px circle at var(--mx) var(--my), rgba(61,91,255,0.14), transparent 60%)",
-        }}
-      />
       <Wrapper>
         <></>
       </Wrapper>
       <div className="relative z-[2] flex items-start justify-between gap-4">
         <div>
-          <span className="mono-label">
+          <span className="log">
             {project.category} · {project.year ?? ""}
           </span>
-          <h3 className="mt-4 text-2xl md:text-[28px] tracking-[-0.02em] group-hover:text-[var(--color-accent)] transition-colors">
+          <h3 className="display mt-4 text-[clamp(22px,2.4vw,30px)]">
             {project.title}
           </h3>
-          {project.role ? (
-            <p className="mt-1 text-[13px] text-[var(--color-subtle)] font-mono uppercase tracking-widest">
-              {project.role}
-            </p>
-          ) : null}
+          {project.role ? <p className="log mt-1.5">{project.role}</p> : null}
         </div>
         <div className="flex items-center gap-2">
           {project.github ? (

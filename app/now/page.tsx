@@ -34,11 +34,11 @@ export default function NowPage() {
   return (
     <div className="shell pt-40 pb-20">
       <div className="max-w-3xl mb-16">
-        <p className="mono-label mb-5">
+        <p className="log mb-5">
           <span className="text-[var(--color-accent)]">Status</span> &nbsp; /now
         </p>
         <h1 className="display text-[clamp(48px,9vw,128px)] text-[var(--color-ink)]">
-          What I'm on, <span className="italic text-[var(--color-accent)]">right now</span>.
+          What I'm on, right now.
         </h1>
         <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[var(--color-muted)] max-w-2xl">
           Inspired by Derek Sivers' <a className="link-underline" href="https://nownownow.com/about" target="_blank" rel="noreferrer">/now page convention</a>.

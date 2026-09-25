@@ -1,19 +1,27 @@
 import { ImageResponse } from "next/og";
 
 import { site } from "@/lib/site";
+import { ogLines } from "@/lib/copy";
 
 export const alt = site.title;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+const INK = "#faf3dd";
+const MUTED = "#c9c3b4";
+const SUBTLE = "#92817a";
+const ACCENT = "#00b4d8";
+
 export default async function OGImage() {
+  const lines = ogLines();
+
   return new ImageResponse(
     (
       <div
         style={{
           width: "100%",
           height: "100%",
-          background: "#0a0a0b",
+          background: "#0b0d0f",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -25,13 +33,12 @@ export default async function OGImage() {
         <div
           style={{
             position: "absolute",
-            top: "-200px",
-            right: "-120px",
+            top: "-220px",
+            right: "-140px",
             width: "640px",
             height: "640px",
             borderRadius: "50%",
-            background:
-              "radial-gradient(circle, rgba(61,91,255,0.6) 0%, rgba(10,10,11,0) 70%)",
+            background: `radial-gradient(circle, ${ACCENT}33 0%, rgba(11,13,15,0) 70%)`,
             filter: "blur(40px)",
             display: "flex",
           }}
@@ -42,53 +49,36 @@ export default async function OGImage() {
             alignItems: "center",
             gap: "16px",
             fontSize: "20px",
-            color: "#a0a0a6",
-            textTransform: "uppercase",
-            letterSpacing: "0.2em",
+            color: MUTED,
           }}
         >
-          <span style={{ color: "#3d5bff" }}>eh.</span>
-          <span
-            style={{
-              width: "28px",
-              height: "1px",
-              background: "#a0a0a6",
-            }}
-          />
+          <span style={{ color: ACCENT }}>eh.</span>
+          <span style={{ width: "28px", height: "1px", background: MUTED }} />
           <span>ethanharianto.com</span>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "24px",
-          }}
-        >
+        <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
           <div
             style={{
               display: "flex",
-              flexWrap: "wrap",
-              alignItems: "baseline",
-              gap: "24px",
-              fontSize: "108px",
+              flexDirection: "column",
+              fontSize: lines.length > 2 ? "76px" : "104px",
               fontWeight: 600,
               letterSpacing: "-0.04em",
-              lineHeight: 0.95,
-              color: "#fafaf7",
+              lineHeight: 0.98,
+              color: INK,
               maxWidth: "1000px",
             }}
           >
-            <span>Founding engineer,</span>
-            <span style={{ color: "#3d5bff", fontStyle: "italic" }}>
-              shipping the whole product.
-            </span>
+            {lines.map((l, i) => (
+              <span key={i}>{l}</span>
+            ))}
           </div>
           <div
             style={{
               display: "flex",
               fontSize: "24px",
-              color: "#a0a0a6",
+              color: MUTED,
               maxWidth: "900px",
               lineHeight: 1.4,
             }}
@@ -103,13 +93,11 @@ export default async function OGImage() {
             justifyContent: "space-between",
             alignItems: "center",
             fontSize: "16px",
-            color: "#6b6b72",
-            textTransform: "uppercase",
-            letterSpacing: "0.2em",
+            color: SUBTLE,
           }}
         >
-          <span>Portfolio · 2026</span>
-          <span>San Francisco Bay Area</span>
+          <span>{site.location}</span>
+          <span>2026</span>
         </div>
       </div>
     ),
