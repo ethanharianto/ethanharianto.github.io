@@ -4,12 +4,15 @@ import { AboutBlurb } from "@/components/home/AboutBlurb";
 import { ExperienceStrip } from "@/components/home/ExperienceStrip";
 import { WritingPreview } from "@/components/home/WritingPreview";
 import { ContactBlock } from "@/components/home/ContactBlock";
+import { getPublishedCaseStudies } from "@/lib/content";
 
 export default function HomePage() {
+  const caseStudySlugs = getPublishedCaseStudies().map((s) => s.slug);
+
   return (
     <>
       <Hero />
-      <SelectedWork />
+      <SelectedWork caseStudySlugs={caseStudySlugs} />
       <AboutBlurb />
       <ExperienceStrip />
       <WritingPreview />

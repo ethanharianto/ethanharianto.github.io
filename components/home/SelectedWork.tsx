@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
@@ -7,12 +8,24 @@ import { ArrowUpRight } from "lucide-react";
 import { featuredProjects } from "@/lib/projects";
 import { sections } from "@/lib/copy";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { CursorPreview } from "@/components/ui/CursorPreview";
 
-export function SelectedWork() {
+interface SelectedWorkProps {
+  /** Slugs that have a published case study, i.e. a real `/work/[slug]`
+   * page to link to. Featured projects without one (the tactile builds
+   * that only have a data entry, not a write-up yet) fall back to an
+   * external link or render unlinked instead of pointing at a 404. */
+  caseStudySlugs?: string[];
+}
+
+export function SelectedWork({ caseStudySlugs = [] }: SelectedWorkProps) {
   const items = featuredProjects();
+  const caseStudySet = new Set(caseStudySlugs);
+  const [hoveredMark, setHoveredMark] = useState<string | null>(null);
 
   return (
     <section id="work" className="py-28 md:py-40 relative">
+      <CursorPreview activeMark={hoveredMark} />
       <div className="shell">
         <SectionHeader
           index="01"
@@ -32,7 +45,13 @@ export function SelectedWork() {
 
         <div className="grid gap-6">
           {items.map((p, idx) => (
-            <WorkRow key={p.slug} project={p} index={idx} />
+            <WorkRow
+              key={p.slug}
+              project={p}
+              index={idx}
+              hasCaseStudy={caseStudySet.has(p.slug)}
+              onHover={setHoveredMark}
+            />
           ))}
         </div>
       </div>
@@ -43,9 +62,20 @@ export function SelectedWork() {
 interface WorkRowProps {
   project: ReturnType<typeof featuredProjects>[number];
   index: number;
+  hasCaseStudy: boolean;
+  onHover: (mark: string | null) => void;
 }
 
-function WorkRow({ project, index }: WorkRowProps) {
+function WorkRow({ project, index, hasCaseStudy, onHover }: WorkRowProps) {
+  // A case study wins when it exists; otherwise fall back to wherever the
+  // project actually lives (repo or live demo) rather than a page that
+  // isn't written yet. If neither exists, the row still shows and still
+  // previews on hover — it just isn't a link.
+  const href = hasCaseStudy
+    ? `/work/${project.slug}`
+    : project.demoUrl ?? project.github ?? null;
+  const isExternal = !hasCaseStudy && !!href;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -54,8 +84,14 @@ function WorkRow({ project, index }: WorkRowProps) {
       transition={{ duration: 0.9, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
     >
       <Link
-        href={`/work/${project.slug}`}
+        href={href ?? "#"}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noreferrer" : undefined}
+        aria-disabled={href ? undefined : true}
+        onClick={href ? undefined : (e) => e.preventDefault()}
         className="group relative block border-t border-[var(--color-hairline)] last:border-b py-8 md:py-12 transition-colors"
+        onMouseEnter={() => project.mark && onHover(project.mark)}
+        onMouseLeave={() => onHover(null)}
       >
         <div className="grid md:grid-cols-12 gap-6 md:gap-8 items-baseline">
           <span className="md:col-span-1 log-val tabular-nums">

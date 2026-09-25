@@ -13,7 +13,7 @@ export interface Project {
   category: ProjectCategory;
   featured?: boolean;
   accent?: string;
-  images?: string[];
+  mark?: string;
   challenges?: string[];
   outcomes?: string[];
 }
@@ -39,6 +39,7 @@ export const projects: Project[] = [
     ],
     category: "Web",
     featured: true,
+    mark: "veridian",
     challenges: [
       "Orchestrating PDF→LaTeX conversion with parallel workers and AI problem detection.",
       "Mistake-analysis pipeline: OCR, LLM analysis, verification, reconciliation, and coordinate detection for overlay.",
@@ -62,7 +63,6 @@ export const projects: Project[] = [
     tags: ["Python", "PyTorch", "Reinforcement Learning", "LLM", "NLP"],
     github: "https://github.com/ethanfarah/cs234-submission",
     category: "AI/ML",
-    featured: true,
     outcomes: [
       "Outperforms LLMLingua-2 on SQuAD 2.0 (different evaluation protocols).",
       "Best config: 74% compression, 90–95% task F1 preserved.",
@@ -80,7 +80,6 @@ export const projects: Project[] = [
       "Shipped core pieces of a real-time conversational assistant platform at Pantheon Lab: built a multi-region STT→LLM→TTS→Lip-Sync pipeline on WebRTC, implemented a secure Go backend with rate-limiting and quotas, and launched a Next.js self-service developer portal that cut API key onboarding from hours to minutes.",
     tags: ["Go", "Next.js", "WebRTC", "System Architecture"],
     category: "Web",
-    featured: true,
     outcomes: [
       "Multi-region WebRTC pipeline in production.",
       "Secure Go backend with per-key rate limits, quotas, and high availability.",
@@ -155,6 +154,8 @@ export const projects: Project[] = [
       "Hardware design project implementing a fully functional digital audio player on an FPGA. Features include playback control, volume adjustment, and real-time frequency visualization.",
     tags: ["Verilog", "FPGA", "Hardware"],
     category: "Hardware",
+    featured: true,
+    mark: "digital-audio-fpga",
   },
   {
     slug: "route-grader",
@@ -168,7 +169,8 @@ export const projects: Project[] = [
     github:
       "https://cs231n.stanford.edu/2024/papers/related-task-self-supervised-learning-for-rock-climbing-route-ra.pdf",
     category: "AI/ML",
-    images: ["/route_grader_preview.png"],
+    featured: true,
+    mark: "route-grader",
   },
   {
     slug: "slide-social",
@@ -180,7 +182,8 @@ export const projects: Project[] = [
       "A full-featured social networking app focused on photo sharing. Built with Swift and UIKit/SwiftUI, with a custom backend.",
     tags: ["Swift", "iOS", "Algorithms"],
     category: "Mobile",
-    images: ["/slide_social_preview.png"],
+    featured: true,
+    mark: "slide-social",
     challenges: [
       "Custom image compression algorithm to reduce bandwidth costs.",
       "Managing complex social-graph relationships efficiently.",
@@ -200,6 +203,8 @@ export const projects: Project[] = [
       "Assembly and programming of the Stanford Pupper robot. Involved calibrating the physical build and tweaking gait algorithms for stability.",
     tags: ["Hardware", "Robotics", "Python"],
     category: "Hardware",
+    featured: true,
+    mark: "stanford-pupper",
   },
   {
     slug: "smartgoggles",
