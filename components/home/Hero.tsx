@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 
 import { Marquee } from "@/components/ui/Marquee";
-import { RewardCurve } from "@/components/ui/RewardCurve";
 import { Slot } from "@/components/ui/Slot";
 import { hero } from "@/lib/copy";
 import { site } from "@/lib/site";
@@ -11,8 +10,8 @@ import { site } from "@/lib/site";
 /**
  * The run's first screen.
  *
- * Curve (the claim), headline, lede, evidence, actions. All copy comes
- * from `@/lib/copy` — nothing is written inline here.
+ * Headline, lede, evidence, actions. All copy comes from `@/lib/copy`
+ * — nothing is written inline here.
  *
  * What was removed and shouldn't come back:
  *   - the blurred aurora (a gradient wash doing nothing)
@@ -21,42 +20,16 @@ import { site } from "@/lib/site";
  *   - the all-caps availability eyebrow
  *   - the accent-italic "whole" (accenting one word in a headline is a
  *     named tell, and the signal colour is for plotted lines)
+ *   - the reward-curve plot, its phase-of-a-training-run axis, and the
+ *     monospace key/value evidence log — a page that opens on a chart
+ *     and a log line reads as a model card, not a person. The headline
+ *     already makes the claim; it doesn't need an instrument panel
+ *     underneath it to back it up.
  */
 export function Hero() {
   return (
     <section className="relative min-h-[100svh] flex flex-col">
       <div className="shell relative flex-1 flex flex-col justify-center pt-28 pb-12">
-        {/* ── The claim, as a plot ─────────────────────────────── */}
-        <RewardCurve
-          draw
-          duration={1.4}
-          delay={0.15}
-          className="w-full h-[92px] md:h-[124px] mb-1"
-          label="Reward curve rising in steps across a training run"
-          stops={[
-            { at: 0.0, value: 0.06 },
-            { at: 0.14, value: 0.14 },
-            { at: 0.24, value: 0.22 },
-            { at: 0.38, value: 0.39 },
-            { at: 0.47, value: 0.44 },
-            { at: 0.61, value: 0.63 },
-            { at: 0.72, value: 0.71 },
-            { at: 0.86, value: 0.88 },
-            { at: 0.95, value: 0.93 },
-            { at: 1.0, value: 0.96 },
-          ]}
-        />
-
-        {/* x-axis: the phases of one run. The curve isn't decoration
-            on top of the page — it *is* the page map. */}
-        <div className="hidden md:grid grid-cols-5 gap-4 border-t border-[var(--color-hairline)] pt-1.5 mb-6">
-          {hero.phases.map((t) => (
-            <span key={t} className="log">
-              {t}
-            </span>
-          ))}
-        </div>
-
         <h1 className="display text-[length:var(--text-hero)] text-[var(--color-ink)] max-w-[15ch]">
           {hero.headline}
         </h1>
@@ -69,22 +42,28 @@ export function Hero() {
           <Slot slot={hero.lede} className="prose mt-7 text-[length:var(--text-lede)]" />
         </motion.div>
 
-        {/* ── The evidence ──────────────────────────────────────── */}
-        <motion.dl
+        {/* ── The evidence, said plainly ───────────────────────── */}
+        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.9, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-7 flex flex-wrap gap-x-10 gap-y-3 border-t border-[var(--color-hairline)] pt-3.5"
+          className="mt-7 flex flex-wrap items-baseline gap-x-2 gap-y-1.5 text-[15px] leading-relaxed text-[var(--color-muted)] border-t border-[var(--color-hairline)] pt-3.5"
         >
           {hero.evidence
             .filter((f) => f.v)
-            .map((f) => (
-              <div key={f.k} className="flex items-baseline gap-2.5">
-                <dt className="log-key">{f.k}</dt>
-                <dd className="log-val">{f.v}</dd>
-              </div>
+            .map((f, i, arr) => (
+              <span key={f.k} className="inline-flex items-baseline gap-2">
+                <span>
+                  {f.k} <span className="text-[var(--color-ink)]">{f.v}</span>
+                </span>
+                {i < arr.length - 1 && (
+                  <span aria-hidden className="text-[var(--color-hairline-strong)]">
+                    ·
+                  </span>
+                )}
+              </span>
             ))}
-        </motion.dl>
+        </motion.p>
 
         {/* ── The two things you can do ─────────────────────────── */}
         <motion.div
