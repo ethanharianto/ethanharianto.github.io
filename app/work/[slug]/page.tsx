@@ -3,13 +3,13 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypePrettyCode from "rehype-pretty-code";
 
-import { getCaseStudies, getCaseStudyBySlug } from "@/lib/content";
+import { getPublishedCaseStudies, getCaseStudyBySlug } from "@/lib/content";
 import { CaseStudyLayout } from "@/components/work/CaseStudyLayout";
 import { mdxComponents } from "@/components/mdx/MdxComponents";
 import { site } from "@/lib/site";
 
 export function generateStaticParams() {
-  return getCaseStudies().map((s) => ({ slug: s.slug }));
+  return getPublishedCaseStudies().map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({
@@ -41,7 +41,7 @@ export default async function CaseStudyPage({
   const study = getCaseStudyBySlug(slug);
   if (!study) notFound();
 
-  const all = getCaseStudies();
+  const all = getPublishedCaseStudies();
   const idx = all.findIndex((s) => s.slug === slug);
   const prev =
     idx > 0

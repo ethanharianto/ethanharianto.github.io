@@ -68,16 +68,15 @@ export default function CvPage() {
     <div className="shell pt-40 pb-20">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
         <div className="max-w-3xl">
-          <p className="mono-label mb-5">
+          <p className="log mb-5">
             <span className="text-[var(--color-accent)]">Document</span> &nbsp; /cv
           </p>
           <h1 className="display text-[clamp(48px,9vw,128px)] text-[var(--color-ink)]">
             Ethan Harianto.
           </h1>
           <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-[var(--color-muted)]">
-            Founding engineer building products end-to-end — product, systems,
-            and go-to-market. Pear Prime&nbsp;&apos;26. Stanford MS &amp; BS
-            CS&nbsp;&apos;26. Based in the San Francisco Bay Area.
+            Stanford MS &amp; BS CS&nbsp;&apos;26. Pear Prime&nbsp;&apos;26. Based
+            in the San Francisco Bay Area.
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
@@ -104,7 +103,7 @@ export default function CvPage() {
               key={`${e.school}-${e.degree}`}
               className="grid md:grid-cols-12 gap-4 md:gap-8 py-6"
             >
-              <div className="md:col-span-2 mono-label">{e.period}</div>
+              <div className="md:col-span-2 log">{e.period}</div>
               <div className="md:col-span-6">
                 <p className="text-xl tracking-[-0.02em]">{e.school}</p>
                 <p className="text-[var(--color-muted)]">{e.degree}</p>
@@ -120,7 +119,7 @@ export default function CvPage() {
       <Section title="Programs & recognition">
         <div className="divide-y divide-[var(--color-hairline)] border-y border-[var(--color-hairline)]">
           <div className="grid md:grid-cols-12 gap-4 md:gap-8 py-6">
-            <div className="md:col-span-2 mono-label">2026</div>
+            <div className="md:col-span-2 log">2026</div>
             <div className="md:col-span-6">
               <p className="text-xl tracking-[-0.02em]">Pear Prime &apos;26</p>
               <p className="text-[var(--color-muted)]">
@@ -141,7 +140,7 @@ export default function CvPage() {
               key={e.company}
               className="grid md:grid-cols-12 gap-4 md:gap-8 py-8"
             >
-              <div className="md:col-span-2 mono-label">{e.period}</div>
+              <div className="md:col-span-2 log">{e.period}</div>
               <div className="md:col-span-6">
                 <p className="text-xl tracking-[-0.02em]">{e.company}</p>
                 <p className="text-[var(--color-muted)]">
@@ -175,7 +174,7 @@ export default function CvPage() {
               key={g.title}
               className="rounded-2xl border border-[var(--color-hairline)] bg-[var(--color-surface)] p-6"
             >
-              <p className="mono-label mb-4">{g.title}</p>
+              <p className="log mb-4">{g.title}</p>
               <div className="flex flex-wrap gap-1.5">
                 {g.items.map((s) => (
                   <span key={s} className="chip">
@@ -188,7 +187,7 @@ export default function CvPage() {
         </div>
       </Section>
 
-      <div className="mt-20 flex items-center justify-between border-t border-[var(--color-hairline)] pt-8 mono-label">
+      <div className="mt-20 flex items-center justify-between border-t border-[var(--color-hairline)] pt-8 log">
         <span>{site.location}</span>
         <a
           href={site.social.linkedin}
@@ -213,7 +212,7 @@ function Section({
 }) {
   return (
     <section className="mt-20">
-      <h2 className="mono-label mb-6 flex items-center gap-3">
+      <h2 className="log mb-6 flex items-center gap-3">
         <span className="text-[var(--color-accent)]">§</span>
         {title}
       </h2>

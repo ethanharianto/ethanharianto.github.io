@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-import { site } from "@/lib/site";
+import { getContentOverrides } from "@/lib/content/resolve.server";
+import { buildResolvedContent } from "@/lib/content/shape";
 import { Wordmark } from "@/components/brand/Wordmark";
 
-export function Footer() {
+export async function Footer() {
+  const overrides = await getContentOverrides();
+  const { site } = buildResolvedContent(overrides);
   const year = new Date().getFullYear();
   return (
     <footer className="relative mt-32 border-t border-[var(--color-hairline)] pt-20 pb-12">
@@ -16,12 +19,12 @@ export function Footer() {
           <p className="text-[var(--color-muted)] max-w-sm text-[15px] leading-relaxed">
             {site.description}
           </p>
-          <p className="mono-label">Based in {site.location.toLowerCase()}.</p>
+          <p className="log">Based in {site.location.toLowerCase()}.</p>
         </div>
 
         <div className="md:col-span-4 grid grid-cols-2 gap-8">
           <div className="space-y-3">
-            <p className="mono-label">Pages</p>
+            <p className="log">Pages</p>
             <ul className="space-y-2 text-[15px]">
               {site.nav.map((item) => (
                 <li key={item.name}>
@@ -36,7 +39,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="space-y-3">
-            <p className="mono-label">Elsewhere</p>
+            <p className="log">Elsewhere</p>
             <ul className="space-y-2 text-[15px]">
               <li>
                 <a

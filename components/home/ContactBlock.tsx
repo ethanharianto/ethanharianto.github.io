@@ -1,9 +1,14 @@
 import { ArrowUpRight, Mail, Github, Linkedin, FileText } from "lucide-react";
 
 import { Reveal } from "@/components/ui/Reveal";
-import { site } from "@/lib/site";
+import { Slot } from "@/components/ui/Slot";
+import { getContentOverrides } from "@/lib/content/resolve.server";
+import { buildResolvedContent } from "@/lib/content/shape";
 
-export function ContactBlock() {
+export async function ContactBlock() {
+  const overrides = await getContentOverrides();
+  const { contact, site } = buildResolvedContent(overrides);
+
   const channels = [
     {
       name: "Email",
@@ -35,22 +40,20 @@ export function ContactBlock() {
     <section id="contact" className="py-28 md:py-40 relative">
       <div className="shell">
         <Reveal>
-          <p className="mono-label mb-6">
+          <p className="log mb-6">
             <span className="text-[var(--color-accent)]">05</span> &nbsp; Contact
           </p>
         </Reveal>
         <Reveal delay={0.05}>
           <h2 className="display text-[clamp(48px,10vw,160px)] leading-[0.95] text-[var(--color-ink)] max-w-[14ch]">
-            Let's build <span className="italic text-[var(--color-accent)]">something</span> together.
+            <Slot slot={contact.headline} as="span" />
           </h2>
         </Reveal>
         <Reveal delay={0.15}>
-          <p className="mt-8 max-w-xl text-[17px] md:text-[19px] leading-relaxed text-[var(--color-muted)]">
-            I&apos;m looking for a full-time founding-engineer role at an
-            early-stage, ambitious team, starting 2026 — joining Pear
-            Prime &apos;26 this year. Reach out if you&apos;re building
-            something consequential.
-          </p>
+          <Slot
+            slot={contact.body}
+            className="mt-8 max-w-xl text-[17px] md:text-[19px] leading-relaxed text-[var(--color-muted)]"
+          />
         </Reveal>
 
         <Reveal delay={0.25}>
@@ -61,14 +64,14 @@ export function ContactBlock() {
                 href={c.href}
                 target={c.name === "Email" ? undefined : "_blank"}
                 rel="noreferrer"
-                className="group flex items-center justify-between gap-6 px-6 py-5 rounded-xl border border-[var(--color-hairline)] hover:border-[var(--color-ink)] hover:bg-[rgba(250,250,247,0.02)] transition-all"
+                className="group flex items-center justify-between gap-6 px-6 py-5 rounded-xl border border-[var(--color-hairline)] hover:border-[var(--color-ink)] hover:bg-[rgba(250,243,221,0.02)] transition-all"
               >
                 <div className="flex items-center gap-4">
                   <span className="inline-flex w-10 h-10 items-center justify-center rounded-full border border-[var(--color-hairline)] text-[var(--color-muted)] group-hover:text-[var(--color-accent)] group-hover:border-[var(--color-accent)] transition-colors">
                     {c.icon}
                   </span>
                   <span>
-                    <span className="mono-label block">{c.name}</span>
+                    <span className="log block">{c.name}</span>
                     <span className="text-[15px] text-[var(--color-ink)]">
                       {c.value}
                     </span>

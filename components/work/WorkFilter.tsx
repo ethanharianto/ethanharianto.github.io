@@ -21,7 +21,7 @@ export function WorkFilter({
   return (
     <div
       role="tablist"
-      className="inline-flex items-center gap-1 p-1 rounded-full border border-[var(--color-hairline)] bg-[rgba(250,250,247,0.02)]"
+      className="inline-flex items-center gap-1 p-1 rounded-full border border-[var(--color-hairline)] bg-[rgba(250,243,221,0.02)]"
     >
       {categories.map((cat) => {
         const isActive = active === cat;

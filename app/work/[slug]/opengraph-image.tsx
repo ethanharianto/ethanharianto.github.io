@@ -32,7 +32,7 @@ export default async function CaseStudyOG({
         style={{
           width: "100%",
           height: "100%",
-          background: "#0a0a0b",
+          background: "#0b0d0f",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -50,7 +50,7 @@ export default async function CaseStudyOG({
             height: "720px",
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(61,91,255,0.5) 0%, rgba(10,10,11,0) 70%)",
+              "radial-gradient(circle, rgba(224,162,74,0.5) 0%, rgba(11,13,15,0) 70%)",
             filter: "blur(50px)",
             display: "flex",
           }}
@@ -62,18 +62,18 @@ export default async function CaseStudyOG({
             alignItems: "center",
             justifyContent: "space-between",
             fontSize: "18px",
-            color: "#a0a0a6",
+            color: "#c9c3b4",
             textTransform: "uppercase",
             letterSpacing: "0.22em",
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            <span style={{ color: "#3d5bff" }}>eh.</span>
+            <span style={{ color: "#00b4d8" }}>eh.</span>
             <span
               style={{
                 width: "28px",
                 height: "1px",
-                background: "#a0a0a6",
+                background: "#c9c3b4",
               }}
             />
             <span>Case study</span>
@@ -91,7 +91,7 @@ export default async function CaseStudyOG({
               fontWeight: 600,
               letterSpacing: "-0.04em",
               lineHeight: 0.96,
-              color: "#fafaf7",
+              color: "#faf3dd",
               maxWidth: "1040px",
             }}
           >
@@ -101,7 +101,7 @@ export default async function CaseStudyOG({
             style={{
               display: "flex",
               fontSize: "24px",
-              color: "#a0a0a6",
+              color: "#c9c3b4",
               maxWidth: "960px",
               lineHeight: 1.4,
             }}
@@ -116,7 +116,7 @@ export default async function CaseStudyOG({
             justifyContent: "space-between",
             alignItems: "center",
             fontSize: "16px",
-            color: "#6b6b72",
+            color: "#92817a",
             textTransform: "uppercase",
             letterSpacing: "0.2em",
           }}

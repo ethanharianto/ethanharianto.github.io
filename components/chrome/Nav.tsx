@@ -39,7 +39,7 @@ export function Nav({ onOpenCmdk }: NavProps) {
       className={cn(
         "fixed top-0 inset-x-0 z-40 transition-[background,backdrop-filter,border-color] duration-500",
         scrolled
-          ? "backdrop-blur-xl bg-[rgba(10,10,11,0.72)] border-b border-[var(--color-hairline)]"
+          ? "backdrop-blur-xl bg-[rgba(11,13,15,0.72)] border-b border-[var(--color-hairline)]"
           : "border-b border-transparent",
       )}
     >
@@ -60,15 +60,12 @@ export function Nav({ onOpenCmdk }: NavProps) {
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "px-3 py-2 text-sm tracking-tight transition-colors",
+                  "px-3 py-2 text-[15px] transition-colors",
                   active
                     ? "text-[var(--color-ink)]"
                     : "text-[var(--color-muted)] hover:text-[var(--color-ink)]",
                 )}
               >
-                <span className="font-mono text-[10px] mr-2 text-[var(--color-subtle)]">
-                  {String(site.nav.indexOf(item) + 1).padStart(2, "0")}
-                </span>
                 {item.name}
               </Link>
             );
@@ -76,13 +73,11 @@ export function Nav({ onOpenCmdk }: NavProps) {
 
           <button
             onClick={onOpenCmdk}
-            className="ml-2 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--color-hairline)] bg-[rgba(250,250,247,0.03)] hover:border-[var(--color-hairline-strong)] text-[var(--color-muted)] hover:text-[var(--color-ink)] transition-colors"
+            className="ml-2 inline-flex items-center gap-2 px-2.5 py-1.5 rounded-[var(--radius-md)] border border-[var(--color-hairline)] text-[var(--color-muted)] hover:border-[var(--color-hairline-strong)] hover:text-[var(--color-ink)] transition-colors"
             aria-label="Open command menu"
           >
-            <span className="font-mono text-[10px] tracking-wider uppercase">
-              Search
-            </span>
-            <span className="inline-flex items-center gap-1 font-mono text-[10px] text-[var(--color-subtle)]">
+            <span className="log">Search</span>
+            <span className="inline-flex items-center gap-1 log">
               {isMac ? <Command size={10} /> : "Ctrl"}K
             </span>
           </button>
@@ -98,7 +93,7 @@ export function Nav({ onOpenCmdk }: NavProps) {
       </div>
 
       {isOpen ? (
-        <div className="md:hidden border-t border-[var(--color-hairline)] bg-[rgba(10,10,11,0.95)] backdrop-blur-xl">
+        <div className="md:hidden border-t border-[var(--color-hairline)] bg-[rgba(11,13,15,0.95)] backdrop-blur-xl">
           <nav className="shell flex flex-col py-6 gap-1">
             {site.nav.map((item, idx) => (
               <Link

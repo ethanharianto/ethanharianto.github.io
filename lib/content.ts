@@ -72,8 +72,20 @@ export function getWriting(): WritingEntry[] {
   return getAllWriting().filter((e) => !e.frontmatter.draft);
 }
 
+/** Every post regardless of `draft`. Previews and local checks only. */
+export function getDraftWriting(): WritingEntry[] {
+  return getAllWriting().filter((e) => e.frontmatter.draft);
+}
+
+/**
+ * Drafts are invisible to every public entry point, not just the index.
+ * The by-slug loaders used to read from `getAllWriting()`, which meant a
+ * `draft: true` post was still statically generated and still served its
+ * "Working draft — replace before publishing." description to search
+ * engines — the flag protected the list, not the page.
+ */
 export function getWritingBySlug(slug: string): WritingEntry | undefined {
-  return getAllWriting().find((e) => e.slug === slug);
+  return getWriting().find((e) => e.slug === slug);
 }
 
 export function getCaseStudies(): CaseStudyEntry[] {
@@ -89,5 +101,5 @@ export function getPublishedCaseStudies(): CaseStudyEntry[] {
 }
 
 export function getCaseStudyBySlug(slug: string): CaseStudyEntry | undefined {
-  return getCaseStudies().find((e) => e.slug === slug);
+  return getPublishedCaseStudies().find((e) => e.slug === slug);
 }

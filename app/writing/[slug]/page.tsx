@@ -5,12 +5,14 @@ import { ArrowLeft } from "lucide-react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypePrettyCode from "rehype-pretty-code";
 
-import { getAllWriting, getWritingBySlug } from "@/lib/content";
+import { getWriting, getWritingBySlug } from "@/lib/content";
 import { mdxComponents } from "@/components/mdx/MdxComponents";
 import { site } from "@/lib/site";
 
+/* Published only. Drafts 404 rather than shipping their placeholder
+   meta description to anyone who guesses the URL. */
 export function generateStaticParams() {
-  return getAllWriting().map((p) => ({ slug: p.slug }));
+  return getWriting().map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -48,7 +50,7 @@ export default async function WritingPostPage({
       <header className="shell pt-40 pb-16 border-b border-[var(--color-hairline)]">
         <Link
           href="/writing"
-          className="inline-flex items-center gap-2 mono-label link-underline"
+          className="inline-flex items-center gap-2 log link-underline"
         >
           <ArrowLeft size={12} />
           All writing
@@ -56,7 +58,7 @@ export default async function WritingPostPage({
         <h1 className="display mt-10 text-[clamp(36px,7vw,96px)] text-[var(--color-ink)] max-w-[20ch]">
           {post.frontmatter.title}
         </h1>
-        <div className="mt-8 flex items-center gap-4 mono-label">
+        <div className="mt-8 flex items-center gap-4 log">
           <span>
             {new Date(post.frontmatter.date).toLocaleDateString("en-US", {
               month: "long",
@@ -70,7 +72,7 @@ export default async function WritingPostPage({
       </header>
 
       <div className="shell py-16 md:py-24">
-        <div className="mx-auto prose-case">
+        <div className="prose-case">
           <MDXRemote
             source={post.content}
             components={mdxComponents}

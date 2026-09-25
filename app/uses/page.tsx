@@ -66,11 +66,11 @@ export default function UsesPage() {
   return (
     <div className="shell pt-40 pb-20">
       <div className="max-w-3xl mb-16">
-        <p className="mono-label mb-5">
+        <p className="log mb-5">
           <span className="text-[var(--color-accent)]">Setup</span> &nbsp; /uses
         </p>
         <h1 className="display text-[clamp(48px,9vw,128px)] text-[var(--color-ink)]">
-          Tools I actually <span className="italic text-[var(--color-accent)]">use</span>.
+          Tools I actually use.
         </h1>
         <p className="mt-8 text-[17px] md:text-[19px] leading-relaxed text-[var(--color-muted)] max-w-2xl">
           Not an aspirational list. This is the hardware and software I reach
@@ -84,7 +84,7 @@ export default function UsesPage() {
             key={s.title}
             className="rounded-2xl border border-[var(--color-hairline)] bg-[var(--color-surface)] p-6 md:p-8"
           >
-            <h2 className="mono-label mb-6">{s.title}</h2>
+            <h2 className="log mb-6">{s.title}</h2>
             <ul className="space-y-3">
               {s.items.map((item) => (
                 <li
